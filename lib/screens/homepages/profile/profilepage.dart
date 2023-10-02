@@ -124,7 +124,7 @@ class Profilepage extends StatelessWidget {
                         ),
                       ),
                       SizedBox(
-                        width: 110,
+                        width: 105.5,
                       ),
                       Icon(
                         Icons.edit_attributes_rounded,

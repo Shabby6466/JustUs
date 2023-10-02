@@ -34,7 +34,7 @@ final pages = [
   const Center(child: Text("diary")),
   const Center(child: Text("just us")),
   const Center(child: Text("play")),
-  const Profilepage(),
+  const Profilepage()
 ];
 
 enum Menus { home, diary, justus, chat, profile }
