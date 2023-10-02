@@ -1,5 +1,5 @@
 import 'package:flutter/material.dart';
-import 'package:justus/screens/homepages/homepage.dart';
+import 'package:justus/screens/homepages/mainpage.dart';
 import 'package:justus/screens/registration/signuppage.dart';
 
 class Loginpage extends StatelessWidget {
@@ -80,7 +80,7 @@ class Loginpage extends StatelessWidget {
                   Navigator.push(
                       context,
                       MaterialPageRoute(
-                          builder: (context) => const Homepage()));
+                          builder: (context) => const MainPage()));
                 },
                 child: Container(
                   decoration: BoxDecoration(
