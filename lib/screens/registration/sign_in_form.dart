@@ -81,6 +81,7 @@ class SignInForm extends StatelessWidget {
               label: Text("Sign In")),
         )
       ],
-    ));
+    )
+    );
   }
 }

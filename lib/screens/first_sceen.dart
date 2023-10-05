@@ -1,7 +1,6 @@
 import 'package:flutter/cupertino.dart';
 import 'package:flutter/material.dart';
-import 'package:justus/screens/registration/sign_in_form.dart';
-
+import 'package:justus/screens/registration/CustomSignInDialoug.dart';
 class FirstScreen extends StatelessWidget {
   const FirstScreen({Key? key}) : super(key: key);
 
@@ -48,65 +47,7 @@ class FirstScreen extends StatelessWidget {
               const SizedBox(height: 45),
               InkWell(
                 onTap: () {
-                  showGeneralDialog(
-                      context: context,
-                      pageBuilder: (BuildContext context,
-                              Animation<double> animation,
-                              Animation<double> secondaryAnimation) =>
-                          Center(
-                              child: Container(
-                                  height: 630,
-                                  margin: const EdgeInsets.symmetric(
-                                      horizontal: 20),
-                                  padding: const EdgeInsets.symmetric(
-                                      horizontal: 20, vertical: 30),
-                                  decoration: BoxDecoration(
-                                    color: Colors.white.withOpacity(0.96),
-                                    borderRadius: BorderRadius.circular(40),
-                                  ),
-                                  child: Scaffold(
-                                      backgroundColor: Colors.transparent,
-                                      body: Column(
-                                        children: [
-                                          Text(
-                                            "Sign In",
-                                            style: TextStyle(
-                                              fontSize: 34,
-                                              fontWeight: FontWeight.w800,
-                                            ),
-                                          ),
-                                          Padding(
-                                            padding: const EdgeInsets.symmetric(
-                                                vertical: 16),
-                                            child: Text(
-                                              "Welcome back, you've been missed!and Welcome back and you i we, you've been missed! Welcome back, you've been missed!",
-                                              textAlign: TextAlign.center,
-                                            ),
-                                          ),
-                                          const SignInForm(),
-                                          Row(
-                                            children: [
-                                              Expanded(
-                                                child: Divider(),
-                                              ),
-                                              Padding(
-                                                padding:
-                                                    const EdgeInsets.symmetric(
-                                                        horizontal: 16),
-                                                child: Text(
-                                                  "OR",
-                                                  style: TextStyle(
-                                                    color: Colors.black26,
-                                                  ),
-                                                ),
-                                              ),
-                                              Expanded(
-                                                child: Divider(),
-                                              ),
-                                            ],
-                                          )
-                                        ],
-                                      )))));
+                  customSignInDialogue(context);
                 },
                 child: Container(
                   decoration: BoxDecoration(
@@ -146,4 +87,5 @@ class FirstScreen extends StatelessWidget {
       ),
     );
   }
+
 }
