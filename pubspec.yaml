@@ -29,6 +29,7 @@ environment:
 # versions available, run `flutter pub outdated`.
 dependencies:
   cupertino_icons: ^1.0.2
+  flutter_svg: ^2.0.7
   flutter:
     sdk: flutter
 
@@ -67,7 +68,7 @@ flutter:
       fonts:
         # - asset: assets/fonts/AsapCondensed-Black.ttf
         # - asset: assets/fonts/AsapCondensed-Bold.ttf
-        - asset: assets/fonts/Urbanist-Medium.ttf
+        - asset: assets/fonts/Poppins-Regular.ttf
   #       - asset: fonts/Schyler-Italic.ttf
   #         style: italic
   #   - family: Trajan Pro

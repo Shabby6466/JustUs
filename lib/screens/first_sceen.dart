@@ -1,6 +1,6 @@
+import 'package:flutter/cupertino.dart';
 import 'package:flutter/material.dart';
-import 'package:justus/screens/registration/loginpage.dart';
-import 'package:justus/screens/registration/signuppage.dart';
+import 'package:justus/screens/registration/sign_in_form.dart';
 
 class FirstScreen extends StatelessWidget {
   const FirstScreen({Key? key}) : super(key: key);
@@ -48,107 +48,65 @@ class FirstScreen extends StatelessWidget {
               const SizedBox(height: 45),
               InkWell(
                 onTap: () {
-                  showDialog(
-                    context: context,
-                    builder: (context) {
-                      return AlertDialog(
-                        alignment: Alignment.center,
-                        titlePadding: EdgeInsets.all(16),
-                        contentPadding: EdgeInsets.all(30),
-                        title: Center(
-                          child: Text(
-                            'Start with an account',
-                          ),
-                        ),
-                        content: Text(
-                          'Sign in to your account or create a new one',
-                          style: TextStyle(
-                            fontSize: 20,
-                            fontWeight: FontWeight.w500,
-                          ),
-                        ),
-                        actions: [
+                  showGeneralDialog(
+                      context: context,
+                      pageBuilder: (BuildContext context,
+                              Animation<double> animation,
+                              Animation<double> secondaryAnimation) =>
                           Center(
-                            child: InkWell(
-                              onTap: () {
-                                Navigator.push(
-                                    context,
-                                    MaterialPageRoute(
-                                        builder: (context) =>
-                                            const Loginpage()));
-                              },
                               child: Container(
-                                decoration: BoxDecoration(
-                                  color: Colors.purple.shade900,
-                                  borderRadius: BorderRadius.circular(50),
-                                ),
-                                height: 40,
-                                width: 150,
-                                child: Center(
-                                  child: Text(
-                                    "Login",
-                                    style: TextStyle(
-                                      color: Colors.white,
-                                      fontSize: 20,
-                                      fontWeight: FontWeight.bold,
-                                    ),
+                                  height: 630,
+                                  margin: const EdgeInsets.symmetric(
+                                      horizontal: 20),
+                                  padding: const EdgeInsets.symmetric(
+                                      horizontal: 20, vertical: 30),
+                                  decoration: BoxDecoration(
+                                    color: Colors.white.withOpacity(0.96),
+                                    borderRadius: BorderRadius.circular(40),
                                   ),
-                                ),
-                              ),
-                            ),
-                          ),
-                          const SizedBox(
-                            height: 10,
-                          ),
-                          Center(
-                            child: InkWell(
-                              onTap: () {
-                                Navigator.push(
-                                    context,
-                                    MaterialPageRoute(
-                                        builder: (context) => const Signup()));
-                              },
-                              child: Container(
-                                decoration: BoxDecoration(
-                                  color: Colors.purple.shade900,
-                                  borderRadius: BorderRadius.circular(50),
-                                ),
-                                height: 40,
-                                width: 150,
-                                child: Center(
-                                  child: Text(
-                                    "Register",
-                                    style: TextStyle(
-                                      color: Colors.white,
-                                      fontSize: 20,
-                                      fontWeight: FontWeight.bold,
-                                    ),
-                                  ),
-                                ),
-                              ),
-                            ),
-                          ),
-                          SizedBox(height: 15),
-                          Container(
-                            child: Center(
-                              child: Text(
-                                "Connection more stronger",
-                                textAlign: TextAlign.center,
-                                style: TextStyle(
-                                  color: Colors.black,
-                                  fontSize: 15,
-                                  fontWeight: FontWeight.w400,
-                                ),
-                              ),
-                            ),
-                          ),
-                          const SizedBox(
-                            height: 15,
-                          ),
-                        ],
-                      );
-                    },
-                  );
+                                  child: Scaffold(
+                                      backgroundColor: Colors.transparent,
+                                      body: Column(
+                                        children: [
+                                          Text(
+                                            "Sign In",
+                                            style: TextStyle(
+                                              fontSize: 34,
+                                              fontWeight: FontWeight.w800,
+                                            ),
+                                          ),
+                                          Padding(
+                                            padding: const EdgeInsets.symmetric(
+                                                vertical: 16),
+                                            child: Text(
+                                              "Welcome back, you've been missed!and Welcome back and you i we, you've been missed! Welcome back, you've been missed!",
+                                              textAlign: TextAlign.center,
+                                            ),
+                                          ),
+                                          const SignInForm(),
+                                          Row(
+                                            children: [
+                                              Expanded(
+                                                child: Divider(),
+                                              ),
+                                              Padding(
+                                                padding:
+                                                    const EdgeInsets.symmetric(
+                                                        horizontal: 16),
+                                                child: Text(
+                                                  "OR",
+                                                  style: TextStyle(
+                                                    color: Colors.black26,
+                                                  ),
+                                                ),
+                                              ),
+                                              Expanded(
+                                                child: Divider(),
+                                              ),
+                                            ],
+                                          )
+                                        ],
+                                      )))));
                 },
                 child: Container(
                   decoration: BoxDecoration(

@@ -1,6 +1,8 @@
 import 'package:flutter/material.dart';
 import 'package:convex_bottom_bar/convex_bottom_bar.dart';
+import 'package:justus/screens/JustusPage.dart';
 import 'package:justus/screens/homepages/profile/profilepage.dart';
+import 'package:justus/screens/notes/Notes.dart';
 
 class MainPage extends StatefulWidget {
   const MainPage({Key? key}) : super(key: key);
@@ -31,8 +33,8 @@ class _MainPageState extends State<MainPage> {
 
 final pages = [
   const Center(child: Text("home")),
-  const Center(child: Text("diary")),
-  const Center(child: Text("just us")),
+  const Notes(),
+  const JustUs(),
   const Center(child: Text("play")),
   const Profilepage()
 ];
@@ -53,7 +55,7 @@ class MyBottomNavigation extends StatelessWidget {
       backgroundColor: Colors.black,
       items: const [
         TabItem(icon: Icons.home, title: 'Home'),
-        TabItem(icon: Icons.notes, title: 'Diary'),
+        TabItem(icon: Icons.file_copy, title: 'Notes'),
         TabItem(
           icon: Icons.add,
           title: 'Just Us',

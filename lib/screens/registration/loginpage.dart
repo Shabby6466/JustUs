@@ -1,5 +1,5 @@
 import 'package:flutter/material.dart';
-import 'package:justus/screens/homepages/mainpage.dart';
+import 'package:justus/screens/mainpage.dart';
 import 'package:justus/screens/registration/signuppage.dart';
 
 class Loginpage extends StatelessWidget {

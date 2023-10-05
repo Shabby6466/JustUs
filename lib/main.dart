@@ -13,11 +13,28 @@ class MyApp extends StatelessWidget {
   Widget build(BuildContext context) {
     return  MaterialApp(
       debugShowCheckedModeBanner: false,
-      theme: ThemeData(  
-        scaffoldBackgroundColor: Colors.white,
+      theme: ThemeData(
+        scaffoldBackgroundColor: Color(0xFFEEF1F8),
+        primarySwatch: Colors.blue,
         fontFamily: 'Circular',
+        inputDecorationTheme: InputDecorationTheme(
+          filled: true,
+          fillColor: Colors.white,
+          errorStyle: TextStyle(height: 0),
+          border: defaultInputBorder,
+          enabledBorder: defaultInputBorder,
+          focusedBorder: defaultInputBorder,
+          errorBorder: defaultInputBorder,
+        ),
       ),
-      home: FirstScreen(),
+      home:const FirstScreen(),
     );
   }
 }
+const defaultInputBorder = OutlineInputBorder(
+  borderRadius: BorderRadius.all(Radius.circular(16)),
+  borderSide: BorderSide(
+    color: Color(0xFFDEE3F2),
+    width: 1,
+  ),
+);
