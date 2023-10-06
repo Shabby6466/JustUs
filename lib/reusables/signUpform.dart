@@ -1,10 +1,10 @@
 import 'package:flutter/cupertino.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter_svg/flutter_svg.dart';
-import 'package:justus/screens/mainpage.dart';
+import 'package:justus/reusables/profile_edit.dart';
 
-class SignInForm extends StatelessWidget {
-  const SignInForm({
+class SignUpForm extends StatelessWidget {
+  const SignUpForm({
     super.key,
   });
 
@@ -61,6 +61,29 @@ class SignInForm extends StatelessWidget {
             ),
           ),
         ),
+        const Text("Confirm Password", style: TextStyle(color: Colors.black54)),
+        Padding(
+          padding: const EdgeInsets.only(top: 8, bottom: 8),
+          child: TextFormField(
+            decoration: InputDecoration(
+              hintText: "Enter your Password again",
+              focusedBorder: OutlineInputBorder(
+                borderRadius: BorderRadius.circular(20),
+                borderSide: BorderSide(
+                  color: Colors.red,
+                ),
+              ),
+              floatingLabelBehavior: FloatingLabelBehavior.always,
+              prefixIcon: Padding(
+                padding: const EdgeInsets.symmetric(horizontal: 8),
+                child: SvgPicture.asset(
+                  "assets/icons/password.svg",
+                  height: 20,
+                ),
+              ),
+            ),
+          ),
+        ),
         Padding(
           padding: const EdgeInsets.only(top: 8.0, bottom: 24),
           child: ElevatedButton.icon(
@@ -68,7 +91,8 @@ class SignInForm extends StatelessWidget {
                 Navigator.push(
                     context,
                     MaterialPageRoute(
-                        builder: (BuildContext context) => const MainPage()));
+                        builder: (BuildContext context) =>
+                            const ProfileEdit()));
               },
               style: ElevatedButton.styleFrom(
                   backgroundColor: const Color(0xFFF77D8E),
@@ -84,7 +108,7 @@ class SignInForm extends StatelessWidget {
                 CupertinoIcons.arrow_right,
                 color: Color(0xFFFE003),
               ),
-              label: Text("Sign In")),
+              label: Text("Sign Up")),
         )
       ],
     ));

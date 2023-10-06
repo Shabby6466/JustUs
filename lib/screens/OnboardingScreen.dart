@@ -2,17 +2,18 @@ import 'dart:ui';
 import 'package:flutter/cupertino.dart';
 import 'package:flutter/material.dart';
 import 'package:justus/reusables/animatedbutton.dart';
-import 'package:justus/screens/registration/CustomSignInDialoug.dart';
+import 'package:justus/reusables/CustomSignInDialoug.dart';
+import 'package:justus/reusables/custom_singup.dart';
 import 'package:rive/rive.dart';
 
-class Temp extends StatefulWidget {
-  const Temp({Key? key}) : super(key: key);
+class OnboardingScreen extends StatefulWidget {
+  const OnboardingScreen({Key? key}) : super(key: key);
 
   @override
-  State<Temp> createState() => _TempState();
+  State<OnboardingScreen> createState() => _OnboardingScreenState();
 }
 
-class _TempState extends State<Temp> {
+class _OnboardingScreenState extends State<OnboardingScreen> {
   bool isSignInDialogueShown = false;
   late RiveAnimationController _btnAnimationController;
 
@@ -52,7 +53,7 @@ class _TempState extends State<Temp> {
             ),
           ),
           AnimatedPositioned(
-            duration: Duration(milliseconds:240),
+            duration: Duration(milliseconds: 240),
             height: MediaQuery.of(context).size.height,
             width: MediaQuery.of(context).size.width,
             top: isSignInDialogueShown ? -50 : 0,
@@ -96,21 +97,28 @@ class _TempState extends State<Temp> {
                         press: () {
                           _btnAnimationController.isActive = true;
                           Future.delayed(
-                            const Duration(milliseconds: 800),
-
+                            const Duration(milliseconds: 200),
                             () {
-                              setState(() {
-                                isSignInDialogueShown = true;
-                              });
                               customSignInDialogue(context);
                             },
                           );
                         }),
                     Padding(
-                      padding: const EdgeInsets.symmetric(vertical: 24),
+                      padding: const EdgeInsets.symmetric(vertical: 10),
                       child: Container(
-                          alignment: Alignment.center,
-                          child: const Text("Connect With Your Partner")),
+                        alignment: Alignment.center,
+                        child: Row(
+                          mainAxisAlignment: MainAxisAlignment.center,
+                          children: [
+                           const Text("Dont have account? "),
+                            TextButton(
+                                onPressed: () {
+                                  customSignUpDialogue(context);
+                                },
+                                child: Text("Sign Up"))
+                          ],
+                        ),
+                      ),
                     ),
                   ],
                 ),

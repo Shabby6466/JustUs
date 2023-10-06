@@ -2,7 +2,7 @@
 
 import 'package:flutter/material.dart';
 import 'package:justus/screens/first_sceen.dart';
-import 'package:justus/screens/temp.dart';
+import 'package:justus/screens/OnboardingScreen.dart';
 
 void main() {
   runApp(const MyApp());
@@ -30,7 +30,7 @@ class MyApp extends StatelessWidget {
           errorBorder: defaultInputBorder,
         ),
       ),
-      home:const Temp(),
+      home:const OnboardingScreen(),
     );
   }
 }

@@ -46,19 +46,18 @@ Future<Object?> customSignInDialogue(BuildContext context) {
                           Padding(
                             padding: const EdgeInsets.symmetric(vertical: 16),
                             child: Text(
-                                "Elevate your bond, strengthen your connection, and create lasting memories that will be treasured for a lifetime, only on JustUs.!",
+                                "Elevate your bond and create lasting memories treasured for a lifetime,\n only on JustUs.!",
                                 textAlign: TextAlign.center,
                                 style: TextStyle(fontSize: 16)),
                           ),
                           const SignInForm(),
-                          Row(
+                          const Row(
                             children: [
                               Expanded(
                                 child: Divider(),
                               ),
                               Padding(
-                                padding:
-                                    const EdgeInsets.symmetric(horizontal: 16),
+                                padding: EdgeInsets.symmetric(horizontal: 16),
                                 child: Text(
                                   "OR",
                                   style: TextStyle(
@@ -71,7 +70,7 @@ Future<Object?> customSignInDialogue(BuildContext context) {
                               ),
                             ],
                           ),
-                          Padding(
+                          const Padding(
                             padding: EdgeInsets.symmetric(vertical: 24),
                             child: Text(
                               "Signup with Google or Facebook",
