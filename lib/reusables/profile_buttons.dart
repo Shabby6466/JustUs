@@ -34,16 +34,16 @@ class ProfileButtons extends StatelessWidget {
             },
             borderRadius: BorderRadius.circular(35),
             child: Padding(
-              padding: EdgeInsets.all(10.0),
+              padding: EdgeInsets.all(12.0),
               child: Column(
                 children: [
                   icon,
                   Text(
                     name,
                     style: TextStyle(
-                      fontSize: 15,
-                      fontWeight: FontWeight.w600,
-                      color: Colors.black,
+                      fontFamily: "Poppins",
+                      fontSize: 11,
+                      color: Colors.black87,
                     ),
                   ),
                 ],

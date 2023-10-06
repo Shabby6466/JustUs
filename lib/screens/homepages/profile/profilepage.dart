@@ -77,7 +77,7 @@ class Profilepage extends StatelessWidget {
                               'See Your Profile',
                               style: TextStyle(
                                 fontSize: 15,
-                                color: Colors.black87,
+                                color: Colors.black54,
                               ),
                             ),
                           ],
@@ -156,7 +156,7 @@ class Profilepage extends StatelessWidget {
                                 'See Their Profile',
                                 style: TextStyle(
                                   fontSize: 15,
-                                  color: Colors.black87,
+                                  color: Colors.black54,
                                 ),
                               ),
                             ],
@@ -191,6 +191,8 @@ class Profilepage extends StatelessWidget {
                 "Features",
                 style: TextStyle(
                   fontSize: 20,
+                  fontFamily: "Poppins",
+                  color: Colors.black,
                   fontWeight: FontWeight.bold,
                 ),
               ),
@@ -202,12 +204,13 @@ class Profilepage extends StatelessWidget {
                   Row(
                     children: [
                       ProfileButtons(
-                          icon: Icon(
-                            Icons.workspace_premium_sharp,
-                            color: Color(0xFFEA7686),
-                            size: 40,
-                          ),
-                          name: "Premium"),
+                        icon: Icon(
+                          Icons.workspace_premium_sharp,
+                          color: Color(0xFFEA7686),
+                          size: 40,
+                        ),
+                        name: "Premium",
+                      ),
                       ProfileButtons(
                           icon: Icon(
                             Icons.calendar_month_rounded,
@@ -305,6 +308,7 @@ class Profilepage extends StatelessWidget {
                               'Settings & Privacy',
                               style: TextStyle(
                                   fontSize: 18,
+                                  fontFamily: "Poppins",
                                   fontWeight: FontWeight.bold,
                                   color: Colors.black),
                             ),
@@ -347,7 +351,7 @@ class Profilepage extends StatelessWidget {
                           backgroundColor: Colors.white,
                           child: Icon(
                             Icons.person_2,
-                            color:Color(0xFFEA7686),
+                            color: Color(0xFFEA7686),
                             size: 40,
                           ),
                         ),
@@ -361,6 +365,7 @@ class Profilepage extends StatelessWidget {
                             Text(
                               'About Developer',
                               style: TextStyle(
+                                  fontFamily: "Poppins",
                                   fontSize: 18,
                                   fontWeight: FontWeight.bold,
                                   color: Colors.black),
@@ -418,6 +423,7 @@ class Profilepage extends StatelessWidget {
                             Text(
                               'Signout',
                               style: TextStyle(
+                                  fontFamily: "Poppins",
                                   fontSize: 18,
                                   fontWeight: FontWeight.bold,
                                   color: Colors.black),

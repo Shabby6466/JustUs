@@ -149,7 +149,7 @@ class _EditFormState extends State<EditForm> {
                 ),
                 Expanded(
                   child: RadioListTile(
-                    title: Text("Female"),
+                    title: const Text("Female"),
                     value: Gender.female,
                     groupValue: gender,
                     visualDensity: const VisualDensity(

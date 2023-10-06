@@ -52,7 +52,7 @@ class MyBottomNavigation extends StatelessWidget {
     return ConvexAppBar(
       height: 70,
       elevation: 0.0,
-      backgroundColor: const Color(0xFFEA7686),
+      backgroundColor: const Color(0xFF17203A).withOpacity(0.8),
       items: const [
         TabItem(icon: Icons.home, title: 'Home'),
         TabItem(icon: Icons.file_copy, title: 'Notes'),
@@ -61,7 +61,7 @@ class MyBottomNavigation extends StatelessWidget {
           title: 'Just Us',
           activeIcon: Icon(
             Icons.add_box_rounded,
-            color: Colors.red,
+            color: Colors.white,
           ),
         ),
         TabItem(icon: Icons.chat_bubble_outline, title: 'Chat'),
