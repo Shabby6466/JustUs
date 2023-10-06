@@ -12,18 +12,19 @@ class _ProfileEditState extends State<ProfileEdit> {
   @override
   Widget build(BuildContext context) {
     return Scaffold(
-      body: SafeArea(
-        child: Container(
-          padding: EdgeInsets.all(26),
-            alignment: Alignment.center,
-            child: Column(
-              mainAxisAlignment: MainAxisAlignment.center,
-              crossAxisAlignment: CrossAxisAlignment.center,
-              children: [
-                    EditForm(),
-                    
-              ],
-            )),
+      body: SingleChildScrollView(
+        child: SafeArea(
+          child: Container(
+              padding: EdgeInsets.all(26),
+              alignment: Alignment.center,
+              child: Column(
+                mainAxisAlignment: MainAxisAlignment.center,
+                crossAxisAlignment: CrossAxisAlignment.center,
+                children: [
+                  EditForm(),
+                ],
+              )),
+        ),
       ),
     );
   }

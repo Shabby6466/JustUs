@@ -8,16 +8,16 @@ class Profilepage extends StatelessWidget {
   Widget build(BuildContext context) {
     return Scaffold(
       appBar: AppBar(
-        backgroundColor: Colors.white,
+        backgroundColor: Colors.transparent,
         elevation: 0.0,
         centerTitle: true,
         automaticallyImplyLeading: false,
         title: const Text(
           'Profile',
           style: TextStyle(
+            fontFamily: "Poppins",
+            fontSize: 24,
             color: Colors.black,
-            fontSize: 20,
-            fontWeight: FontWeight.bold,
           ),
         ),
       ),
@@ -28,9 +28,7 @@ class Profilepage extends StatelessWidget {
             Padding(
               padding: const EdgeInsets.all(16.0),
               child: GestureDetector(
-                onTap: () {
-                  print("personal profile");
-                },
+                onTap: () {},
                 child: Container(
                   width: 400,
                   height: 100,
@@ -46,7 +44,7 @@ class Profilepage extends StatelessWidget {
                     color: Colors.white,
                     borderRadius: BorderRadius.circular(30),
                   ),
-                  child: Row(
+                  child: const Row(
                     children: [
                       Padding(
                         padding: EdgeInsets.all(10.0),
@@ -70,6 +68,7 @@ class Profilepage extends StatelessWidget {
                               'Personal Profile',
                               style: TextStyle(
                                   fontSize: 20,
+                                  fontFamily: "Poppins",
                                   fontWeight: FontWeight.bold,
                                   color: Colors.black),
                             ),
@@ -147,6 +146,7 @@ class Profilepage extends StatelessWidget {
                               Text(
                                 'Partners Profile',
                                 style: TextStyle(
+                                    fontFamily: "Poppins",
                                     fontSize: 20,
                                     fontWeight: FontWeight.bold,
                                     color: Colors.black),
@@ -186,7 +186,7 @@ class Profilepage extends StatelessWidget {
             ),
             Container(
               alignment: Alignment.centerLeft,
-              padding: EdgeInsets.only(left: 40),
+              padding: const EdgeInsets.only(left: 40),
               child: const Text(
                 "Features",
                 style: TextStyle(
@@ -204,7 +204,7 @@ class Profilepage extends StatelessWidget {
                       ProfileButtons(
                           icon: Icon(
                             Icons.workspace_premium_sharp,
-                            color: Colors.purple[700],
+                            color: Color(0xFFEA7686),
                             size: 40,
                           ),
                           name: "Premium"),
@@ -212,14 +212,14 @@ class Profilepage extends StatelessWidget {
                           icon: Icon(
                             Icons.calendar_month_rounded,
                             //Icons.miscellaneous_services_rounded,
-                            color: Colors.purple[700],
+                            color: Color(0xFFEA7686),
                             size: 40,
                           ),
                           name: "Calendar"),
                       ProfileButtons(
                           icon: Icon(
                             Icons.lock_person,
-                            color: Colors.purple[700],
+                            color: Color(0xFFEA7686),
                             size: 40,
                           ),
                           name: "Private"),
@@ -233,21 +233,21 @@ class Profilepage extends StatelessWidget {
                       ProfileButtons(
                           icon: Icon(
                             Icons.screen_share,
-                            color: Colors.purple[700],
+                            color: Color(0xFFEA7686),
                             size: 40,
                           ),
                           name: "Watch"),
                       ProfileButtons(
                           icon: Icon(
                             Icons.note,
-                            color: Colors.purple[700],
+                            color: Color(0xFFEA7686),
                             size: 40,
                           ),
                           name: "Diary"),
                       ProfileButtons(
                           icon: Icon(
                             Icons.photo_album,
-                            color: Colors.purple[700],
+                            color: Color(0xFFEA7686),
                             size: 40,
                           ),
                           name: "Memories"),
@@ -274,7 +274,8 @@ class Profilepage extends StatelessWidget {
                         color: Colors.grey.withOpacity(0.4),
                         spreadRadius: 1,
                         blurRadius: 5,
-                        offset: Offset(1, 2), // changes position of shadow
+                        offset:
+                            const Offset(1, 2), // changes position of shadow
                       ),
                     ],
                     color: Colors.white,
@@ -283,18 +284,18 @@ class Profilepage extends StatelessWidget {
                   child: Row(
                     children: [
                       Padding(
-                        padding: EdgeInsets.all(10.0),
+                        padding: const EdgeInsets.all(10.0),
                         child: CircleAvatar(
-                          child: Icon(
-                            Icons.settings,
-                            color: Colors.purple[700],
-                            size: 40,
-                          ),
                           radius: 35,
                           backgroundColor: Colors.white,
+                          child: Icon(
+                            Icons.settings,
+                            color: Color(0xFFEA7686),
+                            size: 40,
+                          ),
                         ),
                       ),
-                      Padding(
+                      const Padding(
                         padding: EdgeInsets.all(5.0),
                         child: Column(
                           mainAxisAlignment: MainAxisAlignment.center,
@@ -330,7 +331,8 @@ class Profilepage extends StatelessWidget {
                         color: Colors.grey.withOpacity(0.4),
                         spreadRadius: 1,
                         blurRadius: 5,
-                        offset: Offset(1, 2), // changes position of shadow
+                        offset:
+                            const Offset(1, 2), // changes position of shadow
                       ),
                     ],
                     color: Colors.white,
@@ -339,18 +341,18 @@ class Profilepage extends StatelessWidget {
                   child: Row(
                     children: [
                       Padding(
-                        padding: EdgeInsets.all(10.0),
+                        padding: const EdgeInsets.all(10.0),
                         child: CircleAvatar(
-                          child: Icon(
-                            Icons.person_2,
-                            color: Colors.purple[700],
-                            size: 40,
-                          ),
                           radius: 35,
                           backgroundColor: Colors.white,
+                          child: Icon(
+                            Icons.person_2,
+                            color:Color(0xFFEA7686),
+                            size: 40,
+                          ),
                         ),
                       ),
-                      Padding(
+                      const Padding(
                         padding: EdgeInsets.all(5.0),
                         child: Column(
                           mainAxisAlignment: MainAxisAlignment.center,
@@ -386,7 +388,8 @@ class Profilepage extends StatelessWidget {
                         color: Colors.grey.withOpacity(0.4),
                         spreadRadius: 1,
                         blurRadius: 5,
-                        offset: Offset(1, 2), // changes position of shadow
+                        offset:
+                            const Offset(1, 2), // changes position of shadow
                       ),
                     ],
                     color: Colors.white,
@@ -395,18 +398,18 @@ class Profilepage extends StatelessWidget {
                   child: Row(
                     children: [
                       Padding(
-                        padding: EdgeInsets.all(10.0),
+                        padding: const EdgeInsets.all(10.0),
                         child: CircleAvatar(
+                          radius: 35,
+                          backgroundColor: Colors.white,
                           child: Icon(
                             Icons.logout_rounded,
                             color: Colors.red[700],
                             size: 40,
                           ),
-                          radius: 35,
-                          backgroundColor: Colors.white,
                         ),
                       ),
-                      Padding(
+                      const Padding(
                         padding: EdgeInsets.all(5.0),
                         child: Column(
                           mainAxisAlignment: MainAxisAlignment.center,
@@ -427,7 +430,7 @@ class Profilepage extends StatelessWidget {
                 ),
               ),
             ),
-            SizedBox(
+            const SizedBox(
               height: 70,
             ),
           ],

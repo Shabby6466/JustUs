@@ -52,7 +52,7 @@ class MyBottomNavigation extends StatelessWidget {
     return ConvexAppBar(
       height: 70,
       elevation: 0.0,
-      backgroundColor: Colors.black,
+      backgroundColor: const Color(0xFFEA7686),
       items: const [
         TabItem(icon: Icons.home, title: 'Home'),
         TabItem(icon: Icons.file_copy, title: 'Notes'),

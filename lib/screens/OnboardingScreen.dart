@@ -110,7 +110,7 @@ class _OnboardingScreenState extends State<OnboardingScreen> {
                         child: Row(
                           mainAxisAlignment: MainAxisAlignment.center,
                           children: [
-                           const Text("Dont have account? "),
+                            const Text("Dont have account? "),
                             TextButton(
                                 onPressed: () {
                                   customSignUpDialogue(context);

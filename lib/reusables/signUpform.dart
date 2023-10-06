@@ -85,7 +85,7 @@ class SignUpForm extends StatelessWidget {
           ),
         ),
         Padding(
-          padding: const EdgeInsets.only(top: 8.0, bottom: 24),
+          padding: const EdgeInsets.only(top: 16.0, bottom: 24),
           child: ElevatedButton.icon(
               onPressed: () {
                 Navigator.push(
