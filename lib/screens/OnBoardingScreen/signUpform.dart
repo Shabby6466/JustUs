@@ -1,6 +1,7 @@
 import 'package:flutter/cupertino.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter_svg/flutter_svg.dart';
+import 'package:justus/reusables/MyColors.dart';
 import 'package:justus/reusables/profile_edit.dart';
 
 class SignUpForm extends StatelessWidget {
@@ -14,16 +15,17 @@ class SignUpForm extends StatelessWidget {
         child: Column(
       crossAxisAlignment: CrossAxisAlignment.start,
       children: [
-        const Text("Email", style: TextStyle(color: Colors.black54)),
+        Text("Email", style: TextStyle(color: MyColors.lightFontColor)),
         Padding(
           padding: const EdgeInsets.only(top: 8, bottom: 8),
           child: TextFormField(
             decoration: InputDecoration(
               hintText: "Enter your email",
+              fillColor: MyColors.lightBackgroundColor.withOpacity(0.96),
               focusedBorder: OutlineInputBorder(
                 borderRadius: BorderRadius.circular(20),
                 borderSide: BorderSide(
-                  color: Colors.red,
+                  color: MyColors.lightFontColor,
                 ),
               ),
               floatingLabelBehavior: FloatingLabelBehavior.always,
@@ -37,17 +39,18 @@ class SignUpForm extends StatelessWidget {
             ),
           ),
         ),
-        Text("Password", style: TextStyle(color: Colors.black54)),
+        Text("Password", style: TextStyle(color: MyColors.lightFontColor)),
         Padding(
           padding: const EdgeInsets.only(top: 8, bottom: 8),
           child: TextFormField(
             obscureText: true,
             decoration: InputDecoration(
               hintText: "Enter your password",
+              fillColor: MyColors.lightBackgroundColor.withOpacity(0.96),
               focusedBorder: OutlineInputBorder(
                 borderRadius: BorderRadius.circular(20),
                 borderSide: BorderSide(
-                  color: Colors.red,
+                  color: MyColors.lightFontColor,
                 ),
               ),
               floatingLabelBehavior: FloatingLabelBehavior.always,
@@ -61,16 +64,18 @@ class SignUpForm extends StatelessWidget {
             ),
           ),
         ),
-        const Text("Confirm Password", style: TextStyle(color: Colors.black54)),
+        Text("Confirm Password",
+            style: TextStyle(color: MyColors.lightFontColor)),
         Padding(
           padding: const EdgeInsets.only(top: 8, bottom: 8),
           child: TextFormField(
             decoration: InputDecoration(
               hintText: "Enter your Password again",
+              fillColor: MyColors.lightBackgroundColor.withOpacity(0.96),
               focusedBorder: OutlineInputBorder(
                 borderRadius: BorderRadius.circular(20),
                 borderSide: BorderSide(
-                  color: Colors.red,
+                  color: MyColors.lightFontColor,
                 ),
               ),
               floatingLabelBehavior: FloatingLabelBehavior.always,
@@ -85,7 +90,7 @@ class SignUpForm extends StatelessWidget {
           ),
         ),
         Padding(
-          padding: const EdgeInsets.only(top: 16.0, bottom: 24),
+          padding: const EdgeInsets.only(top: 22.0, bottom: 24),
           child: ElevatedButton.icon(
               onPressed: () {
                 Navigator.push(
@@ -95,7 +100,8 @@ class SignUpForm extends StatelessWidget {
                             const ProfileEdit()));
               },
               style: ElevatedButton.styleFrom(
-                  backgroundColor: const Color(0xFFF77D8E),
+                  foregroundColor: Colors.white,
+                  backgroundColor: MyColors.lightPrimaryColor,
                   minimumSize: const Size(double.infinity, 56),
                   shape: const RoundedRectangleBorder(
                       borderRadius: BorderRadius.only(
@@ -108,7 +114,7 @@ class SignUpForm extends StatelessWidget {
                 CupertinoIcons.arrow_right,
                 color: Color(0xFFFE003),
               ),
-              label: Text("Sign Up")),
+              label: Text("Sign Up", style: TextStyle(fontSize: 16))),
         )
       ],
     ));

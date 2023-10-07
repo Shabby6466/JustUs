@@ -2,8 +2,9 @@ import 'dart:ui';
 import 'package:flutter/cupertino.dart';
 import 'package:flutter/material.dart';
 import 'package:justus/reusables/animatedbutton.dart';
-import 'package:justus/reusables/CustomSignInDialoug.dart';
-import 'package:justus/reusables/custom_singup.dart';
+import 'package:justus/screens/OnBoardingScreen/CustomSignInDialoug.dart';
+import 'package:justus/screens/OnBoardingScreen/CustomSignUpdialogue.dart';
+import 'package:justus/reusables/MyColors.dart';
 import 'package:rive/rive.dart';
 
 class OnboardingScreen extends StatefulWidget {
@@ -75,6 +76,7 @@ class _OnboardingScreenState extends State<OnboardingScreen> {
                             "Your Exclusive World, Together",
                             style: TextStyle(
                               fontFamily: 'Poppins',
+                              color: MyColors.lightFontColor,
                               fontSize: 50,
                               height: 1.2,
                             ),
@@ -82,9 +84,10 @@ class _OnboardingScreenState extends State<OnboardingScreen> {
                           const SizedBox(
                             height: 16,
                           ),
-                          const Text(
+                          Text(
                             "Unlock a world of shared experiences and unforgettable moments that you can curate together, exclusively on JustUs.",
-                            style: TextStyle(fontSize: 16),
+                            style: TextStyle(
+                                fontSize: 16, color: MyColors.lightFontColor),
                           ),
                         ],
                       ),
@@ -110,12 +113,14 @@ class _OnboardingScreenState extends State<OnboardingScreen> {
                         child: Row(
                           mainAxisAlignment: MainAxisAlignment.center,
                           children: [
-                            const Text("Dont have account? "),
+                            Text("Dont have account?",
+                                style:
+                                    TextStyle(color: MyColors.lightFontColor)),
                             TextButton(
                                 onPressed: () {
                                   customSignUpDialogue(context);
                                 },
-                                child: Text("Sign Up"))
+                                child: Text("Sign Up",))
                           ],
                         ),
                       ),

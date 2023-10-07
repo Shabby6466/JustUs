@@ -1,5 +1,6 @@
 import 'package:flutter/material.dart';
 import 'package:flutter_svg/flutter_svg.dart';
+import 'package:justus/reusables/MyColors.dart';
 import 'package:justus/screens/registration/sign_in_form.dart';
 
 Future<Object?> customSignInDialogue(BuildContext context) {
@@ -26,7 +27,7 @@ Future<Object?> customSignInDialogue(BuildContext context) {
               margin: const EdgeInsets.symmetric(horizontal: 20),
               padding: const EdgeInsets.symmetric(horizontal: 20, vertical: 30),
               decoration: BoxDecoration(
-                color: Colors.white.withOpacity(0.96),
+                color: MyColors.lightBackgroundColor.withOpacity(0.96),
                 borderRadius: BorderRadius.circular(40),
               ),
               child: Scaffold(
@@ -40,6 +41,7 @@ Future<Object?> customSignInDialogue(BuildContext context) {
                             "Sign In",
                             style: TextStyle(
                               fontSize: 34,
+                              color: MyColors.lightFontColor,
                               fontWeight: FontWeight.w800,
                             ),
                           ),
@@ -48,24 +50,27 @@ Future<Object?> customSignInDialogue(BuildContext context) {
                             child: Text(
                                 "Elevate your bond and create lasting memories treasured for a lifetime,\n only on JustUs.!",
                                 textAlign: TextAlign.center,
-                                style: TextStyle(fontSize: 16)),
+                                style: TextStyle(
+                                  fontSize: 16,
+                                  color: MyColors.lightFontColor,
+                                )),
                           ),
                           const SignInForm(),
-                          const Row(
+                           Row(
                             children: [
-                              Expanded(
+                              const Expanded(
                                 child: Divider(),
                               ),
                               Padding(
-                                padding: EdgeInsets.symmetric(horizontal: 16),
+                                padding:const EdgeInsets.symmetric(horizontal: 16),
                                 child: Text(
                                   "OR",
                                   style: TextStyle(
-                                    color: Colors.black26,
+                                    color: MyColors.lightFontColor,
                                   ),
                                 ),
                               ),
-                              Expanded(
+                              const Expanded(
                                 child: Divider(),
                               ),
                             ],

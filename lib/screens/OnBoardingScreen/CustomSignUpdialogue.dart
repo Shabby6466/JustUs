@@ -1,5 +1,6 @@
 import 'package:flutter/material.dart';
-import 'package:justus/reusables/signUpform.dart';
+import 'package:justus/reusables/MyColors.dart';
+import 'package:justus/screens/OnBoardingScreen/signUpform.dart';
 
 Future<Object?> customSignUpDialogue(BuildContext context) {
   return showGeneralDialog(
@@ -21,11 +22,11 @@ Future<Object?> customSignUpDialogue(BuildContext context) {
           Center(
               child: SingleChildScrollView(
             child: Container(
-              height: 560,
+              height: 570,
               margin: const EdgeInsets.symmetric(horizontal: 20),
               padding: const EdgeInsets.symmetric(horizontal: 20, vertical: 30),
               decoration: BoxDecoration(
-                color: Colors.white.withOpacity(0.96),
+                color: MyColors.lightBackgroundColor.withOpacity(0.96),
                 borderRadius: BorderRadius.circular(40),
               ),
               child: Scaffold(
@@ -35,19 +36,23 @@ Future<Object?> customSignUpDialogue(BuildContext context) {
                     children: [
                       Column(
                         children: [
-                          const Text(
+                          Text(
                             "Sign Up",
                             style: TextStyle(
                               fontSize: 34,
+                              color: MyColors.lightFontColor,
                               fontWeight: FontWeight.w800,
                             ),
                           ),
-                          const Padding(
+                          Padding(
                             padding: EdgeInsets.symmetric(vertical: 16),
                             child: Text(
                                 "Connect, Create and Store your memories only on JustUs.!",
                                 textAlign: TextAlign.center,
-                                style: TextStyle(fontSize: 16)),
+                                style: TextStyle(
+                                  fontSize: 16,
+                                  color: MyColors.lightFontColor,
+                                )),
                           ),
                           const SignUpForm(),
                         ],

@@ -1,6 +1,7 @@
 import 'package:flutter/cupertino.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter_svg/flutter_svg.dart';
+import 'package:justus/reusables/MyColors.dart';
 import 'package:justus/screens/mainpage.dart';
 
 class SignInForm extends StatelessWidget {
@@ -37,7 +38,7 @@ class SignInForm extends StatelessWidget {
             ),
           ),
         ),
-        Text("Password", style: TextStyle(color: Colors.black54)),
+        const Text("Password", style: TextStyle(color: Colors.black54)),
         Padding(
           padding: const EdgeInsets.only(top: 8, bottom: 8),
           child: TextFormField(
@@ -62,7 +63,7 @@ class SignInForm extends StatelessWidget {
           ),
         ),
         Padding(
-          padding: const EdgeInsets.only(top: 8.0, bottom: 24),
+          padding: const EdgeInsets.only(top: 18.0, bottom: 24),
           child: ElevatedButton.icon(
               onPressed: () {
                 Navigator.push(
@@ -71,7 +72,8 @@ class SignInForm extends StatelessWidget {
                         builder: (BuildContext context) => const MainPage()));
               },
               style: ElevatedButton.styleFrom(
-                  backgroundColor: const Color(0xFFF77D8E),
+                foregroundColor: Colors.white,
+                  backgroundColor: MyColors.lightPrimaryColor,
                   minimumSize: const Size(double.infinity, 56),
                   shape: const RoundedRectangleBorder(
                       borderRadius: BorderRadius.only(
@@ -84,7 +86,7 @@ class SignInForm extends StatelessWidget {
                 CupertinoIcons.arrow_right,
                 color: Color(0xFFFE003),
               ),
-              label: Text("Sign In")),
+              label: Text("Sign In", style: TextStyle(fontSize: 16))),
         )
       ],
     ));

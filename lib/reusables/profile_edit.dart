@@ -1,5 +1,5 @@
 import 'package:flutter/material.dart';
-import 'package:justus/reusables/editform.dart';
+import 'package:justus/screens/OnBoardingScreen/editform.dart';
 
 class ProfileEdit extends StatefulWidget {
   const ProfileEdit({Key? key}) : super(key: key);
@@ -15,9 +15,9 @@ class _ProfileEditState extends State<ProfileEdit> {
       body: SingleChildScrollView(
         child: SafeArea(
           child: Container(
-              padding: EdgeInsets.all(26),
+              padding: const EdgeInsets.all(26),
               alignment: Alignment.center,
-              child: Column(
+              child: const Column(
                 mainAxisAlignment: MainAxisAlignment.center,
                 crossAxisAlignment: CrossAxisAlignment.center,
                 children: [

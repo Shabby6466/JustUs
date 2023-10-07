@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import 'package:justus/reusables/MyColors.dart';
 
 class ProfileButtons extends StatelessWidget {
   final Icon icon;
@@ -16,7 +17,7 @@ class ProfileButtons extends StatelessWidget {
           height: 80,
           width: 100,
           decoration: BoxDecoration(
-            color: Colors.white,
+            color: MyColors.lightBackgroundColor,
             borderRadius: BorderRadius.circular(35),
             boxShadow: [
               BoxShadow(

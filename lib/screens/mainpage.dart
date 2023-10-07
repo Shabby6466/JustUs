@@ -1,6 +1,6 @@
 import 'package:flutter/material.dart';
 import 'package:convex_bottom_bar/convex_bottom_bar.dart';
-import 'package:justus/screens/JustusPage.dart';
+import 'package:justus/screens/homepages/justUsPage/JustusPage.dart';
 import 'package:justus/screens/homepages/profile/profilepage.dart';
 import 'package:justus/screens/notes/Notes.dart';
 
@@ -15,17 +15,19 @@ class _MainPageState extends State<MainPage> {
   Menus currentIndex = Menus.home;
   @override
   Widget build(BuildContext context) {
-    return Scaffold(
-      extendBody: true,
-      
-      body: pages[currentIndex.index],
-      bottomNavigationBar: MyBottomNavigation(
-        currentIndex: currentIndex,
-        onTap: (value) {
-          setState(() {
-            currentIndex = value;
-          });
-        },
+    return Theme(
+      data: Theme.of(context),
+          child: Scaffold(
+        extendBody: true,
+        body: pages[currentIndex.index],
+        bottomNavigationBar: MyBottomNavigation(
+          currentIndex: currentIndex,
+          onTap: (value) {
+            setState(() {
+              currentIndex = value;
+            });
+          },
+        ),
       ),
     );
   }

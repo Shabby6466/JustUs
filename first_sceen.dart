@@ -1,6 +1,6 @@
 import 'package:flutter/cupertino.dart';
 import 'package:flutter/material.dart';
-import 'package:justus/reusables/CustomSignInDialoug.dart';
+import 'package:justus/screens/OnBoardingScreen/CustomSignInDialoug.dart';
 class FirstScreen extends StatelessWidget {
   const FirstScreen({Key? key}) : super(key: key);
 

@@ -1,4 +1,6 @@
 import 'package:flutter/material.dart';
+import 'package:justus/main.dart';
+import 'package:justus/reusables/MyColors.dart';
 import 'package:justus/reusables/profile_buttons.dart';
 
 class Profilepage extends StatelessWidget {
@@ -12,12 +14,11 @@ class Profilepage extends StatelessWidget {
         elevation: 0.0,
         centerTitle: true,
         automaticallyImplyLeading: false,
-        title: const Text(
+        title: Text(
           'Profile',
           style: TextStyle(
             fontFamily: "Poppins",
             fontSize: 24,
-            color: Colors.black,
           ),
         ),
       ),
@@ -41,10 +42,10 @@ class Profilepage extends StatelessWidget {
                         offset: Offset(1, 2), // changes position of shadow
                       ),
                     ],
-                    color: Colors.white,
+                    color: MyColors.lightBackgroundColor.withOpacity(0.96),
                     borderRadius: BorderRadius.circular(30),
                   ),
-                  child: const Row(
+                  child: Row(
                     children: [
                       Padding(
                         padding: EdgeInsets.all(10.0),
@@ -55,7 +56,7 @@ class Profilepage extends StatelessWidget {
                             fit: BoxFit.contain,
                           ),
                           radius: 35,
-                          backgroundColor: Colors.white,
+                          backgroundColor: MyApp.bgclr,
                         ),
                       ),
                       Padding(
@@ -67,17 +68,16 @@ class Profilepage extends StatelessWidget {
                             Text(
                               'Personal Profile',
                               style: TextStyle(
-                                  fontSize: 20,
-                                  fontFamily: "Poppins",
-                                  fontWeight: FontWeight.bold,
-                                  color: Colors.black),
+                                fontSize: 20,
+                                fontFamily: "Poppins",
+                                fontWeight: FontWeight.bold,
+                              ),
                             ),
                             SizedBox(height: 2),
                             Text(
                               'See Your Profile',
                               style: TextStyle(
                                 fontSize: 15,
-                                color: Colors.black54,
                               ),
                             ),
                           ],
@@ -118,12 +118,12 @@ class Profilepage extends StatelessWidget {
                         offset: Offset(1, 2), // changes position of shadow
                       ),
                     ],
-                    color: Colors.white,
+                    color: MyColors.lightBackgroundColor,
                     borderRadius: BorderRadius.circular(35),
                   ),
                   child: Expanded(
                     flex: 1,
-                    child: const Row(
+                    child: Row(
                       children: [
                         Padding(
                           padding: EdgeInsets.all(10.0),
@@ -133,8 +133,8 @@ class Profilepage extends StatelessWidget {
                               image: AssetImage('assets/icons/signup.png'),
                               fit: BoxFit.contain,
                             ),
+                            backgroundColor: MyApp.bgclr,
                             radius: 35,
-                            backgroundColor: Colors.white,
                           ),
                         ),
                         Padding(
@@ -142,21 +142,20 @@ class Profilepage extends StatelessWidget {
                           child: Column(
                             mainAxisAlignment: MainAxisAlignment.center,
                             crossAxisAlignment: CrossAxisAlignment.start,
-                            children: const [
+                            children: [
                               Text(
                                 'Partners Profile',
                                 style: TextStyle(
-                                    fontFamily: "Poppins",
-                                    fontSize: 20,
-                                    fontWeight: FontWeight.bold,
-                                    color: Colors.black),
+                                  fontFamily: "Poppins",
+                                  fontSize: 20,
+                                  fontWeight: FontWeight.bold,
+                                ),
                               ),
                               SizedBox(height: 2),
                               Text(
                                 'See Their Profile',
                                 style: TextStyle(
                                   fontSize: 15,
-                                  color: Colors.black54,
                                 ),
                               ),
                             ],
@@ -192,7 +191,6 @@ class Profilepage extends StatelessWidget {
                 style: TextStyle(
                   fontSize: 20,
                   fontFamily: "Poppins",
-                  color: Colors.black,
                   fontWeight: FontWeight.bold,
                 ),
               ),
@@ -281,7 +279,7 @@ class Profilepage extends StatelessWidget {
                             const Offset(1, 2), // changes position of shadow
                       ),
                     ],
-                    color: Colors.white,
+                    color: MyColors.lightBackgroundColor,
                     borderRadius: BorderRadius.circular(30),
                   ),
                   child: Row(
@@ -290,7 +288,7 @@ class Profilepage extends StatelessWidget {
                         padding: const EdgeInsets.all(10.0),
                         child: CircleAvatar(
                           radius: 35,
-                          backgroundColor: Colors.white,
+                          backgroundColor: MyColors.lightBackgroundColor,
                           child: Icon(
                             Icons.settings,
                             color: Color(0xFFEA7686),
@@ -309,8 +307,7 @@ class Profilepage extends StatelessWidget {
                               style: TextStyle(
                                   fontSize: 18,
                                   fontFamily: "Poppins",
-                                  fontWeight: FontWeight.bold,
-                                  color: Colors.black),
+                                  fontWeight: FontWeight.bold),
                             ),
                           ],
                         ),
@@ -339,7 +336,7 @@ class Profilepage extends StatelessWidget {
                             const Offset(1, 2), // changes position of shadow
                       ),
                     ],
-                    color: Colors.white,
+                    color: MyColors.lightBackgroundColor,
                     borderRadius: BorderRadius.circular(30),
                   ),
                   child: Row(
@@ -348,7 +345,7 @@ class Profilepage extends StatelessWidget {
                         padding: const EdgeInsets.all(10.0),
                         child: CircleAvatar(
                           radius: 35,
-                          backgroundColor: Colors.white,
+                          backgroundColor: MyColors.lightBackgroundColor,
                           child: Icon(
                             Icons.person_2,
                             color: Color(0xFFEA7686),
@@ -365,10 +362,10 @@ class Profilepage extends StatelessWidget {
                             Text(
                               'About Developer',
                               style: TextStyle(
-                                  fontFamily: "Poppins",
-                                  fontSize: 18,
-                                  fontWeight: FontWeight.bold,
-                                  color: Colors.black),
+                                fontFamily: "Poppins",
+                                fontSize: 18,
+                                fontWeight: FontWeight.bold,
+                              ),
                             ),
                           ],
                         ),
@@ -397,7 +394,7 @@ class Profilepage extends StatelessWidget {
                             const Offset(1, 2), // changes position of shadow
                       ),
                     ],
-                    color: Colors.white,
+                    color: MyColors.lightBackgroundColor,
                     borderRadius: BorderRadius.circular(30),
                   ),
                   child: Row(
@@ -406,7 +403,7 @@ class Profilepage extends StatelessWidget {
                         padding: const EdgeInsets.all(10.0),
                         child: CircleAvatar(
                           radius: 35,
-                          backgroundColor: Colors.white,
+                          backgroundColor: MyColors.lightBackgroundColor,
                           child: Icon(
                             Icons.logout_rounded,
                             color: Colors.red[700],
@@ -423,10 +420,10 @@ class Profilepage extends StatelessWidget {
                             Text(
                               'Signout',
                               style: TextStyle(
-                                  fontFamily: "Poppins",
-                                  fontSize: 18,
-                                  fontWeight: FontWeight.bold,
-                                  color: Colors.black),
+                                fontFamily: "Poppins",
+                                fontSize: 18,
+                                fontWeight: FontWeight.bold,
+                              ),
                             ),
                           ],
                         ),

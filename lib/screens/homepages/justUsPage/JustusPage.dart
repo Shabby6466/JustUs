@@ -16,7 +16,6 @@ class JustUs extends StatelessWidget {
         title: const Text(
           'Just Us',
           style: TextStyle(
-            color: Colors.black,
             fontSize: 25,
             fontWeight: FontWeight.bold,
             fontFamily: 'Poppins',
@@ -45,7 +44,6 @@ class JustUs extends StatelessWidget {
                   child: Text(
                     'Its Just Us here',
                     style: TextStyle(
-                      color: Colors.black,
                       fontSize: 16,
                     ),
                   ),
@@ -123,7 +121,6 @@ class JustUs extends StatelessWidget {
                                               alignment: Alignment.topLeft,
                                               child: Text("Days",
                                                   style: TextStyle(
-                                                    color: Colors.black,
                                                     fontSize: 16,
                                                     fontFamily: 'Poppins',
                                                   )),
@@ -153,7 +150,6 @@ class JustUs extends StatelessWidget {
                                               alignment: Alignment.topLeft,
                                               child: Text("Mood",
                                                   style: TextStyle(
-                                                    color: Colors.black,
                                                     fontSize: 16,
                                                     fontFamily: 'Poppins',
                                                   )),
@@ -186,7 +182,6 @@ class JustUs extends StatelessWidget {
                                               alignment: Alignment.topLeft,
                                               child: Text("Today",
                                                   style: TextStyle(
-                                                    color: Colors.black,
                                                     fontSize: 16,
                                                     fontFamily: 'Poppins',
                                                   )),
@@ -194,7 +189,6 @@ class JustUs extends StatelessWidget {
                                             SizedBox(height: 8),
                                             Text("Nothing",
                                                 style: TextStyle(
-                                                  color: Colors.black,
                                                   fontSize: 15,
                                                   fontFamily: 'Poppins',
                                                 ))
@@ -229,7 +223,7 @@ class JustUs extends StatelessWidget {
                           blurRadius: 5,
                           offset: Offset(1, 2), // changes position of shadow
                         ),
-                      ],t
+                      ],
                       color: Color(0xFF17203A).withOpacity(0.3),
                       borderRadius: BorderRadius.circular(32),
                     ),
