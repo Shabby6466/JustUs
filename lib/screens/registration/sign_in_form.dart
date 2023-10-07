@@ -15,7 +15,9 @@ class SignInForm extends StatelessWidget {
         child: Column(
       crossAxisAlignment: CrossAxisAlignment.start,
       children: [
-        const Text("Email", style: TextStyle(color: Colors.black54)),
+        const Text(
+          "Email",
+        ),
         Padding(
           padding: const EdgeInsets.only(top: 8, bottom: 8),
           child: TextFormField(
@@ -38,7 +40,7 @@ class SignInForm extends StatelessWidget {
             ),
           ),
         ),
-        const Text("Password", style: TextStyle(color: Colors.black54)),
+        const Text("Password"),
         Padding(
           padding: const EdgeInsets.only(top: 8, bottom: 8),
           child: TextFormField(
@@ -72,8 +74,11 @@ class SignInForm extends StatelessWidget {
                         builder: (BuildContext context) => const MainPage()));
               },
               style: ElevatedButton.styleFrom(
-                foregroundColor: Colors.white,
-                  backgroundColor: MyColors.lightPrimaryColor,
+                  foregroundColor: Colors.white,
+                  backgroundColor:
+                      Theme.of(context).brightness == Brightness.dark
+                          ? MyColors.lightPrimaryColor
+                          : MyColors.darkPrimaryColor,
                   minimumSize: const Size(double.infinity, 56),
                   shape: const RoundedRectangleBorder(
                       borderRadius: BorderRadius.only(

@@ -25,18 +25,23 @@ class AnimatedBtn extends StatelessWidget {
               'assets/RivAssets/button.riv',
               controllers: [_btnAnimationController],
             ),
-            const Positioned.fill(
+             Positioned.fill(
               top: 8,
               child: Row(
                 mainAxisAlignment: MainAxisAlignment.center,
                 children: [
-                  Icon(
+                  const Icon(
                     CupertinoIcons.arrow_right,
                     size: 24,
                   ),
                   Text(" Connect",
                       style:
-                          TextStyle(fontSize: 20, fontWeight: FontWeight.w600)),
+
+                          TextStyle(fontSize: 20,
+                          color: Theme.of(context).brightness == Brightness.dark
+                              ? Colors.white
+                              : Colors.black,
+                           fontWeight: FontWeight.w600)),
                 ],
               ),
             ),

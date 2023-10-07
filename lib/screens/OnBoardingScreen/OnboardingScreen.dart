@@ -4,7 +4,6 @@ import 'package:flutter/material.dart';
 import 'package:justus/reusables/animatedbutton.dart';
 import 'package:justus/screens/OnBoardingScreen/CustomSignInDialoug.dart';
 import 'package:justus/screens/OnBoardingScreen/CustomSignUpdialogue.dart';
-import 'package:justus/reusables/MyColors.dart';
 import 'package:rive/rive.dart';
 
 class OnboardingScreen extends StatefulWidget {
@@ -76,7 +75,6 @@ class _OnboardingScreenState extends State<OnboardingScreen> {
                             "Your Exclusive World, Together",
                             style: TextStyle(
                               fontFamily: 'Poppins',
-                              color: MyColors.lightFontColor,
                               fontSize: 50,
                               height: 1.2,
                             ),
@@ -87,7 +85,7 @@ class _OnboardingScreenState extends State<OnboardingScreen> {
                           Text(
                             "Unlock a world of shared experiences and unforgettable moments that you can curate together, exclusively on JustUs.",
                             style: TextStyle(
-                                fontSize: 16, color: MyColors.lightFontColor),
+                                fontSize: 16),
                           ),
                         ],
                       ),
@@ -114,8 +112,7 @@ class _OnboardingScreenState extends State<OnboardingScreen> {
                           mainAxisAlignment: MainAxisAlignment.center,
                           children: [
                             Text("Dont have account?",
-                                style:
-                                    TextStyle(color: MyColors.lightFontColor)),
+                               ),
                             TextButton(
                                 onPressed: () {
                                   customSignUpDialogue(context);

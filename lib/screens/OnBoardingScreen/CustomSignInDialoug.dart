@@ -27,11 +27,15 @@ Future<Object?> customSignInDialogue(BuildContext context) {
               margin: const EdgeInsets.symmetric(horizontal: 20),
               padding: const EdgeInsets.symmetric(horizontal: 20, vertical: 30),
               decoration: BoxDecoration(
-                color: MyColors.lightBackgroundColor.withOpacity(0.96),
+                color: Theme.of(context).brightness == Brightness.light
+                    ? MyColors.lightBackgroundColor.withOpacity(0.8)
+                    : MyColors.darkBackgroundColor.withOpacity(0.8),
                 borderRadius: BorderRadius.circular(40),
               ),
               child: Scaffold(
-                  backgroundColor: Colors.transparent,
+                  backgroundColor: Theme.of(context).brightness == Brightness.light
+                    ? Colors.transparent
+                    : MyColors.darkBackgroundColor.withOpacity(0.8),
                   body: Stack(
                     clipBehavior: Clip.none,
                     children: [
@@ -41,7 +45,6 @@ Future<Object?> customSignInDialogue(BuildContext context) {
                             "Sign In",
                             style: TextStyle(
                               fontSize: 34,
-                              color: MyColors.lightFontColor,
                               fontWeight: FontWeight.w800,
                             ),
                           ),
@@ -52,26 +55,34 @@ Future<Object?> customSignInDialogue(BuildContext context) {
                                 textAlign: TextAlign.center,
                                 style: TextStyle(
                                   fontSize: 16,
-                                  color: MyColors.lightFontColor,
                                 )),
                           ),
                           const SignInForm(),
-                           Row(
+                          Row(
                             children: [
-                              const Expanded(
-                                child: Divider(),
-                              ),
-                              Padding(
-                                padding:const EdgeInsets.symmetric(horizontal: 16),
-                                child: Text(
-                                  "OR",
-                                  style: TextStyle(
-                                    color: MyColors.lightFontColor,
-                                  ),
+                              Expanded(
+                                child: Divider(
+                                  color: Theme.of(context).brightness ==
+                                          Brightness.dark
+                                      ? Colors.black
+                                      : Colors.white,
                                 ),
                               ),
-                              const Expanded(
-                                child: Divider(),
+                              Padding(
+                                padding:
+                                    const EdgeInsets.symmetric(horizontal: 16),
+                                child: Text(
+                                  "OR",
+                                  style: TextStyle(),
+                                ),
+                              ),
+                              Expanded(
+                                child: Divider(
+                                  color: Theme.of(context).brightness ==
+                                          Brightness.dark
+                                     ? Colors.black
+                                      : Colors.white,
+                                ),
                               ),
                             ],
                           ),
@@ -79,9 +90,7 @@ Future<Object?> customSignInDialogue(BuildContext context) {
                             padding: EdgeInsets.symmetric(vertical: 24),
                             child: Text(
                               "Signup with Google or Facebook",
-                              style: TextStyle(
-                                color: Colors.black26,
-                              ),
+                              style: TextStyle(),
                             ),
                           ),
                           Row(

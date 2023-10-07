@@ -1,5 +1,4 @@
 import 'package:flutter/material.dart';
-import 'package:justus/main.dart';
 import 'package:justus/reusables/MyColors.dart';
 import 'package:justus/reusables/profile_buttons.dart';
 
@@ -56,7 +55,7 @@ class Profilepage extends StatelessWidget {
                             fit: BoxFit.contain,
                           ),
                           radius: 35,
-                          backgroundColor: MyApp.bgclr,
+                          backgroundColor: Colors.white,
                         ),
                       ),
                       Padding(
@@ -70,6 +69,10 @@ class Profilepage extends StatelessWidget {
                               style: TextStyle(
                                 fontSize: 20,
                                 fontFamily: "Poppins",
+                                color: Theme.of(context).brightness ==
+                                        Brightness.dark
+                                    ? Colors.white
+                                    : Colors.black,
                                 fontWeight: FontWeight.bold,
                               ),
                             ),
@@ -78,6 +81,10 @@ class Profilepage extends StatelessWidget {
                               'See Your Profile',
                               style: TextStyle(
                                 fontSize: 15,
+                                color: Theme.of(context).brightness ==
+                                        Brightness.dark
+                                    ? Colors.white
+                                    : Colors.black,
                               ),
                             ),
                           ],
@@ -133,7 +140,7 @@ class Profilepage extends StatelessWidget {
                               image: AssetImage('assets/icons/signup.png'),
                               fit: BoxFit.contain,
                             ),
-                            backgroundColor: MyApp.bgclr,
+                            backgroundColor: Colors.white,
                             radius: 35,
                           ),
                         ),
@@ -147,6 +154,10 @@ class Profilepage extends StatelessWidget {
                                 'Partners Profile',
                                 style: TextStyle(
                                   fontFamily: "Poppins",
+                                  color: Theme.of(context).brightness ==
+                                        Brightness.dark
+                                    ? Colors.white
+                                    : Colors.black,
                                   fontSize: 20,
                                   fontWeight: FontWeight.bold,
                                 ),
@@ -156,6 +167,10 @@ class Profilepage extends StatelessWidget {
                                 'See Their Profile',
                                 style: TextStyle(
                                   fontSize: 15,
+                                  color: Theme.of(context).brightness ==
+                                        Brightness.dark
+                                    ? Colors.white
+                                    : Colors.black,
                                 ),
                               ),
                             ],
@@ -296,7 +311,7 @@ class Profilepage extends StatelessWidget {
                           ),
                         ),
                       ),
-                      const Padding(
+                      Padding(
                         padding: EdgeInsets.all(5.0),
                         child: Column(
                           mainAxisAlignment: MainAxisAlignment.center,
@@ -307,6 +322,10 @@ class Profilepage extends StatelessWidget {
                               style: TextStyle(
                                   fontSize: 18,
                                   fontFamily: "Poppins",
+                                  color: Theme.of(context).brightness ==
+                                        Brightness.dark
+                                    ? Colors.white
+                                    : Colors.black,
                                   fontWeight: FontWeight.bold),
                             ),
                           ],
@@ -353,7 +372,7 @@ class Profilepage extends StatelessWidget {
                           ),
                         ),
                       ),
-                      const Padding(
+                      Padding(
                         padding: EdgeInsets.all(5.0),
                         child: Column(
                           mainAxisAlignment: MainAxisAlignment.center,
@@ -363,8 +382,13 @@ class Profilepage extends StatelessWidget {
                               'About Developer',
                               style: TextStyle(
                                 fontFamily: "Poppins",
+                                color: Theme.of(context).brightness ==
+                                        Brightness.dark
+                                    ? Colors.white
+                                    : Colors.black,
                                 fontSize: 18,
                                 fontWeight: FontWeight.bold,
+                                
                               ),
                             ),
                           ],
@@ -411,7 +435,7 @@ class Profilepage extends StatelessWidget {
                           ),
                         ),
                       ),
-                      const Padding(
+                      Padding(
                         padding: EdgeInsets.all(5.0),
                         child: Column(
                           mainAxisAlignment: MainAxisAlignment.center,
@@ -422,6 +446,10 @@ class Profilepage extends StatelessWidget {
                               style: TextStyle(
                                 fontFamily: "Poppins",
                                 fontSize: 18,
+                                color: Theme.of(context).brightness ==
+                                        Brightness.dark
+                                    ? Colors.white
+                                    : Colors.black,
                                 fontWeight: FontWeight.bold,
                               ),
                             ),

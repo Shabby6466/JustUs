@@ -1,8 +1,15 @@
+import 'package:flutter/cupertino.dart';
 import 'package:flutter/material.dart';
 
-class JustUs extends StatelessWidget {
-  const JustUs({Key? key}) : super(key: key);
+class JustUs extends StatefulWidget {
+  static bool? isDarkMode = false;
+  JustUs({Key? key}) : super(key: key);
 
+  @override
+  State<JustUs> createState() => _JustUsState();
+}
+
+class _JustUsState extends State<JustUs> {
   @override
   Widget build(BuildContext context) {
     return Scaffold(
@@ -13,22 +20,31 @@ class JustUs extends StatelessWidget {
         backgroundColor: Colors.transparent,
         foregroundColor: Colors.black,
         elevation: 0,
-        title: const Text(
+        title: Text(
           'Just Us',
           style: TextStyle(
             fontSize: 25,
             fontWeight: FontWeight.bold,
+            color: Theme.of(context).brightness == Brightness.light
+                ? Colors.black
+                : Colors.white,
             fontFamily: 'Poppins',
           ),
         ),
         actions: [
           IconButton(
             onPressed: () {},
+            color: Theme.of(context).brightness == Brightness.light
+                ? Colors.black
+                : Colors.white,
             icon: const Icon(Icons.search),
           ),
           IconButton(
             onPressed: () {},
-            icon: const Icon(Icons.notifications),
+            color: Theme.of(context).brightness == Brightness.light
+                ? Colors.black
+                : Colors.white,
+            icon: const Icon(CupertinoIcons.light_min),
           ),
         ],
       ),
@@ -44,7 +60,7 @@ class JustUs extends StatelessWidget {
                   child: Text(
                     'Its Just Us here',
                     style: TextStyle(
-                      fontSize: 16,
+                      fontSize: 18,
                     ),
                   ),
                 ),
@@ -65,16 +81,10 @@ class JustUs extends StatelessWidget {
                           constraints: const BoxConstraints(
                               maxWidth: 330, maxHeight: 390),
                           decoration: BoxDecoration(
-                            boxShadow: [
-                              BoxShadow(
-                                color: Colors.grey.withOpacity(0.4),
-                                spreadRadius: 1,
-                                blurRadius: 5,
-                                offset:
-                                    Offset(1, 2), // changes position of shadow
-                              ),
-                            ],
-                            color: const Color(0xFF17203A).withOpacity(0.2),
+                            color:
+                                Theme.of(context).brightness == Brightness.dark
+                                    ? Colors.black
+                                    : Colors.red,
                             borderRadius: BorderRadius.circular(40),
                           ),
                         ),
@@ -88,7 +98,10 @@ class JustUs extends StatelessWidget {
                                   constraints: const BoxConstraints(
                                       maxWidth: 180, maxHeight: 200),
                                   decoration: BoxDecoration(
-                                    color: Color(0xFF17203A).withOpacity(0.3),
+                                    color: Theme.of(context).brightness ==
+                                            Brightness.dark
+                                        ? Colors.red
+                                        : Colors.yellow,
                                     borderRadius: BorderRadius.circular(40),
                                   ),
                                 ),
@@ -108,7 +121,10 @@ class JustUs extends StatelessWidget {
                                         constraints: const BoxConstraints(
                                             maxWidth: 80, maxHeight: 80),
                                         decoration: BoxDecoration(
-                                          color: Colors.white,
+                                          color: Theme.of(context).brightness ==
+                                                  Brightness.dark
+                                              ? Colors.black
+                                              : Colors.white,
                                           borderRadius:
                                               BorderRadius.circular(20),
                                         ),
@@ -122,6 +138,11 @@ class JustUs extends StatelessWidget {
                                               child: Text("Days",
                                                   style: TextStyle(
                                                     fontSize: 16,
+                                                    color: Theme.of(context)
+                                                                .brightness ==
+                                                            Brightness.dark
+                                                        ? Colors.white
+                                                        : Colors.black,
                                                     fontFamily: 'Poppins',
                                                   )),
                                             ),
@@ -137,7 +158,10 @@ class JustUs extends StatelessWidget {
                                         constraints: const BoxConstraints(
                                             maxWidth: 80, maxHeight: 80),
                                         decoration: BoxDecoration(
-                                          color: Colors.white,
+                                          color: Theme.of(context).brightness ==
+                                                  Brightness.dark
+                                              ? Colors.black
+                                              : Colors.white,
                                           borderRadius:
                                               BorderRadius.circular(20),
                                         ),
@@ -151,6 +175,11 @@ class JustUs extends StatelessWidget {
                                               child: Text("Mood",
                                                   style: TextStyle(
                                                     fontSize: 16,
+                                                    color: Theme.of(context)
+                                                                .brightness ==
+                                                            Brightness.dark
+                                                        ? Colors.white
+                                                        : Colors.black,
                                                     fontFamily: 'Poppins',
                                                   )),
                                             ),
@@ -169,7 +198,10 @@ class JustUs extends StatelessWidget {
                                         constraints: const BoxConstraints(
                                             maxWidth: 80, maxHeight: 80),
                                         decoration: BoxDecoration(
-                                          color: Colors.white,
+                                          color: Theme.of(context).brightness ==
+                                                  Brightness.dark
+                                              ? Colors.black
+                                              : Colors.white,
                                           borderRadius:
                                               BorderRadius.circular(20),
                                         ),
@@ -184,6 +216,11 @@ class JustUs extends StatelessWidget {
                                                   style: TextStyle(
                                                     fontSize: 16,
                                                     fontFamily: 'Poppins',
+                                                    color: Theme.of(context)
+                                                                .brightness ==
+                                                            Brightness.dark
+                                                        ? Colors.white
+                                                        : Colors.black,
                                                   )),
                                             ),
                                             SizedBox(height: 8),
@@ -191,6 +228,11 @@ class JustUs extends StatelessWidget {
                                                 style: TextStyle(
                                                   fontSize: 15,
                                                   fontFamily: 'Poppins',
+                                                  color: Theme.of(context)
+                                                              .brightness ==
+                                                          Brightness.dark
+                                                      ? Colors.white
+                                                      : Colors.black,
                                                 ))
                                           ],
                                         ))
@@ -224,18 +266,25 @@ class JustUs extends StatelessWidget {
                           offset: Offset(1, 2), // changes position of shadow
                         ),
                       ],
-                      color: Color(0xFF17203A).withOpacity(0.3),
+                      color: Theme.of(context).brightness == Brightness.dark
+                          ? Colors.black
+                          : Colors.white,
                       borderRadius: BorderRadius.circular(32),
                     ),
                   ),
                 ),
-                const Row(
+                Row(
                   mainAxisAlignment: MainAxisAlignment.spaceEvenly,
                   children: [
                     CircleAvatar(
+                      backgroundColor: Colors.pinkAccent,
                       radius: 40,
                     ),
                     CircleAvatar(
+                      backgroundColor:
+                          Theme.of(context).brightness == Brightness.dark
+                              ? Colors.black
+                              : Colors.pink,
                       radius: 40,
                     ),
                   ],

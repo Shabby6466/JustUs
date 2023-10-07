@@ -15,13 +15,12 @@ class SignUpForm extends StatelessWidget {
         child: Column(
       crossAxisAlignment: CrossAxisAlignment.start,
       children: [
-        Text("Email", style: TextStyle(color: MyColors.lightFontColor)),
+        Text("Email"),
         Padding(
           padding: const EdgeInsets.only(top: 8, bottom: 8),
           child: TextFormField(
             decoration: InputDecoration(
               hintText: "Enter your email",
-              fillColor: MyColors.lightBackgroundColor.withOpacity(0.96),
               focusedBorder: OutlineInputBorder(
                 borderRadius: BorderRadius.circular(20),
                 borderSide: BorderSide(
@@ -39,14 +38,13 @@ class SignUpForm extends StatelessWidget {
             ),
           ),
         ),
-        Text("Password", style: TextStyle(color: MyColors.lightFontColor)),
+        Text("Password"),
         Padding(
           padding: const EdgeInsets.only(top: 8, bottom: 8),
           child: TextFormField(
             obscureText: true,
             decoration: InputDecoration(
               hintText: "Enter your password",
-              fillColor: MyColors.lightBackgroundColor.withOpacity(0.96),
               focusedBorder: OutlineInputBorder(
                 borderRadius: BorderRadius.circular(20),
                 borderSide: BorderSide(
@@ -64,14 +62,12 @@ class SignUpForm extends StatelessWidget {
             ),
           ),
         ),
-        Text("Confirm Password",
-            style: TextStyle(color: MyColors.lightFontColor)),
+        Text("Confirm Password"),
         Padding(
           padding: const EdgeInsets.only(top: 8, bottom: 8),
           child: TextFormField(
             decoration: InputDecoration(
               hintText: "Enter your Password again",
-              fillColor: MyColors.lightBackgroundColor.withOpacity(0.96),
               focusedBorder: OutlineInputBorder(
                 borderRadius: BorderRadius.circular(20),
                 borderSide: BorderSide(
@@ -101,7 +97,9 @@ class SignUpForm extends StatelessWidget {
               },
               style: ElevatedButton.styleFrom(
                   foregroundColor: Colors.white,
-                  backgroundColor: MyColors.lightPrimaryColor,
+                  backgroundColor: Theme.of(context).brightness == Brightness.dark
+                          ? MyColors.lightPrimaryColor
+                          : MyColors.darkPrimaryColor,
                   minimumSize: const Size(double.infinity, 56),
                   shape: const RoundedRectangleBorder(
                       borderRadius: BorderRadius.only(

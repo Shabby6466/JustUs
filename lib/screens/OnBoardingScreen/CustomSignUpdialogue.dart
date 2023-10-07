@@ -26,7 +26,9 @@ Future<Object?> customSignUpDialogue(BuildContext context) {
               margin: const EdgeInsets.symmetric(horizontal: 20),
               padding: const EdgeInsets.symmetric(horizontal: 20, vertical: 30),
               decoration: BoxDecoration(
-                color: MyColors.lightBackgroundColor.withOpacity(0.96),
+                color:Theme.of(context).brightness == Brightness.light
+                          ? MyColors.lightBackgroundColor.withOpacity(0.8)
+                          : MyColors.darkBackgroundColor.withOpacity(0.8),
                 borderRadius: BorderRadius.circular(40),
               ),
               child: Scaffold(
@@ -40,7 +42,6 @@ Future<Object?> customSignUpDialogue(BuildContext context) {
                             "Sign Up",
                             style: TextStyle(
                               fontSize: 34,
-                              color: MyColors.lightFontColor,
                               fontWeight: FontWeight.w800,
                             ),
                           ),
@@ -51,7 +52,6 @@ Future<Object?> customSignUpDialogue(BuildContext context) {
                                 textAlign: TextAlign.center,
                                 style: TextStyle(
                                   fontSize: 16,
-                                  color: MyColors.lightFontColor,
                                 )),
                           ),
                           const SignUpForm(),

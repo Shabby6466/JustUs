@@ -1,5 +1,6 @@
 import 'package:flutter/material.dart';
 import 'package:convex_bottom_bar/convex_bottom_bar.dart';
+import 'package:justus/reusables/myColors.dart';
 import 'package:justus/screens/homepages/justUsPage/JustusPage.dart';
 import 'package:justus/screens/homepages/profile/profilepage.dart';
 import 'package:justus/screens/notes/Notes.dart';
@@ -36,7 +37,7 @@ class _MainPageState extends State<MainPage> {
 final pages = [
   const Center(child: Text("home")),
   const Notes(),
-  const JustUs(),
+  JustUs(),
   const Center(child: Text("play")),
   const Profilepage()
 ];
@@ -54,7 +55,7 @@ class MyBottomNavigation extends StatelessWidget {
     return ConvexAppBar(
       height: 70,
       elevation: 0.0,
-      backgroundColor: const Color(0xFF17203A).withOpacity(0.8),
+      backgroundColor: MyColors.lightSecondaryColor.withOpacity(0.8),
       items: const [
         TabItem(icon: Icons.home, title: 'Home'),
         TabItem(icon: Icons.file_copy, title: 'Notes'),
