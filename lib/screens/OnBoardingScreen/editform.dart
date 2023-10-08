@@ -1,6 +1,7 @@
 import 'package:flutter/cupertino.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter_svg/flutter_svg.dart';
+import 'package:justus/reusables/MyColors.dart';
 import 'package:justus/screens/mainpage.dart';
 
 enum Gender { none, male, female }
@@ -18,140 +19,112 @@ class _EditFormState extends State<EditForm> {
   var gender = Gender.none;
   @override
   Widget build(BuildContext context) {
-    return Theme(
-      data: Theme.of(context),
-          child: Form(
-          child: Column(
-        crossAxisAlignment: CrossAxisAlignment.start,
-        children: [
-          Align(
-              alignment: Alignment.center,
-              child: CupertinoButton(
-                  onPressed: () {},
-                  child: CircleAvatar(
-                    radius: 60,
-                    child: Icon(Icons.add_a_photo),
-                  ))),
-          const Text("Username", style: TextStyle(color: Colors.black54)),
-          Padding(
-            padding: const EdgeInsets.only(top: 8, bottom: 8),
-            child: TextFormField(
-              decoration: InputDecoration(
-                hintText: "Enter your username",
-                focusedBorder: OutlineInputBorder(
-                  borderRadius: BorderRadius.circular(20),
-                  borderSide: BorderSide(
-                    color: Colors.red,
-                  ),
-                ),
-                floatingLabelBehavior: FloatingLabelBehavior.always,
-                prefixIcon: Padding(
-                  padding: const EdgeInsets.symmetric(horizontal: 8),
-                  child: SvgPicture.asset(
-                    "assets/icons/email.svg",
-                    height: 20,
-                  ),
+    return Form(
+        child: Column(
+      crossAxisAlignment: CrossAxisAlignment.start,
+      children: [
+        Align(
+            alignment: Alignment.center,
+            child: CupertinoButton(
+                onPressed: () {},
+                child: const CircleAvatar(
+                  radius: 60,
+                  child: Icon(Icons.add_a_photo),
+                ))),
+        const Text(
+          "Username",
+        ),
+        Padding(
+          padding: const EdgeInsets.only(top: 8, bottom: 8),
+          child: TextFormField(
+            decoration: InputDecoration(
+              hintText: "Enter your username",
+              border: OutlineInputBorder(
+                  borderRadius: BorderRadius.circular(25),
+                  borderSide: const BorderSide(color: Colors.blue)),
+              floatingLabelBehavior: FloatingLabelBehavior.always,
+              prefixIcon: Padding(
+                padding: const EdgeInsets.symmetric(horizontal: 8),
+                child: SvgPicture.asset(
+                  "assets/icons/email.svg",
+                  height: 20,
                 ),
               ),
             ),
           ),
-          Text("Phone Number", style: TextStyle(color: Colors.black54)),
-          Padding(
-            padding: const EdgeInsets.only(top: 8, bottom: 8),
-            child: TextFormField(
-              decoration: InputDecoration(
-                hintText: "Phone Number",
-                focusedBorder: OutlineInputBorder(
-                  borderRadius: BorderRadius.circular(20),
-                  borderSide: BorderSide(
-                    color: Colors.red,
-                  ),
-                ),
-                floatingLabelBehavior: FloatingLabelBehavior.always,
-                prefixIcon: Padding(
-                  padding: const EdgeInsets.symmetric(horizontal: 8),
-                  child: SvgPicture.asset(
-                    "assets/icons/password.svg",
-                    height: 20,
-                  ),
+        ),
+        const Text("Phone Number"),
+        Padding(
+          padding: const EdgeInsets.only(top: 8, bottom: 8),
+          child: TextFormField(
+            decoration: InputDecoration(
+              hintText: "Phone Number",
+              border: OutlineInputBorder(
+                  borderRadius: BorderRadius.circular(25),
+                  borderSide: const BorderSide(color: Colors.blue)),
+              floatingLabelBehavior: FloatingLabelBehavior.always,
+              prefixIcon: Padding(
+                padding: const EdgeInsets.symmetric(horizontal: 8),
+                child: SvgPicture.asset(
+                  "assets/icons/password.svg",
+                  height: 20,
                 ),
               ),
             ),
           ),
-          Text("Birthday", style: TextStyle(color: Colors.black54)),
-          Padding(
-            padding: const EdgeInsets.only(top: 8, bottom: 8),
-            child: TextFormField(
-              decoration: InputDecoration(
-                hintText: "DD/MM/YYYY",
-                focusedBorder: OutlineInputBorder(
-                  borderRadius: BorderRadius.circular(20),
-                  borderSide: BorderSide(
-                    color: Colors.red,
-                  ),
-                ),
-                floatingLabelBehavior: FloatingLabelBehavior.always,
-                prefixIcon: Padding(
-                  padding: const EdgeInsets.symmetric(horizontal: 8),
-                  child: SvgPicture.asset(
-                    "assets/icons/password.svg",
-                    height: 20,
-                  ),
+        ),
+        const Text("Birthday"),
+        Padding(
+          padding: const EdgeInsets.only(top: 8, bottom: 8),
+          child: TextFormField(
+            decoration: InputDecoration(
+              hintText: "DD/MM/YYYY",
+              border: OutlineInputBorder(
+                  borderRadius: BorderRadius.circular(25),
+                  borderSide: const BorderSide(color: Colors.blue)),
+              floatingLabelBehavior: FloatingLabelBehavior.always,
+              prefixIcon: Padding(
+                padding: const EdgeInsets.symmetric(horizontal: 8),
+                child: SvgPicture.asset(
+                  "assets/icons/password.svg",
+                  height: 20,
                 ),
               ),
             ),
           ),
-          const Text("Location", style: TextStyle(color: Colors.black54)),
-          Padding(
-            padding: const EdgeInsets.only(top: 8, bottom: 8),
-            child: TextFormField(
-              decoration: InputDecoration(
-                hintText: "Where are you from?",
-                focusedBorder: OutlineInputBorder(
-                  borderRadius: BorderRadius.circular(20),
-                  borderSide: BorderSide(
-                    color: Colors.red,
-                  ),
-                ),
-                floatingLabelBehavior: FloatingLabelBehavior.always,
-                prefixIcon: Padding(
-                  padding: const EdgeInsets.symmetric(horizontal: 8),
-                  child: SvgPicture.asset(
-                    "assets/icons/password.svg",
-                    height: 20,
-                  ),
+        ),
+        const Text("Location"),
+        Padding(
+          padding: const EdgeInsets.only(top: 8, bottom: 8),
+          child: TextFormField(
+            decoration: InputDecoration(
+              hintText: "Where are you from?",
+              border: OutlineInputBorder(
+                  borderRadius: BorderRadius.circular(25),
+                  borderSide: const BorderSide(color: Colors.blue)),
+              floatingLabelBehavior: FloatingLabelBehavior.always,
+              prefixIcon: Padding(
+                padding: const EdgeInsets.symmetric(horizontal: 8),
+                child: SvgPicture.asset(
+                  "assets/icons/password.svg",
+                  height: 20,
                 ),
               ),
             ),
           ),
-          Column(
-            crossAxisAlignment: CrossAxisAlignment.start,
-            children: [
-              Text(
-                "Gender",
-              ),
-              Row(
-                children: [
-                  Expanded(
-                    child: RadioListTile(
-                        title: Text("Male"),
-                        value: Gender.male,
-                        groupValue: gender,
-                        visualDensity: const VisualDensity(
-                          horizontal: VisualDensity.minimumDensity,
-                          vertical: VisualDensity.minimumDensity,
-                        ),
-                        contentPadding: EdgeInsets.zero,
-                        onChanged: (value) {
-                          setState(() {
-                            gender = Gender.male;
-                          });
-                        }),
-                  ),
-                  Expanded(
-                    child: RadioListTile(
-                      title: const Text("Female"),
-                      value: Gender.female,
+        ),
+        Column(
+          crossAxisAlignment: CrossAxisAlignment.start,
+          children: [
+            const Text(
+              "Gender",
+            ),
+            Row(
+              children: [
+                Expanded(
+                  child: RadioListTile(
+                      title: const Text("Male"),
+                      value: Gender.male,
                       groupValue: gender,
                       visualDensity: const VisualDensity(
                         horizontal: VisualDensity.minimumDensity,
@@ -160,42 +133,60 @@ class _EditFormState extends State<EditForm> {
                       contentPadding: EdgeInsets.zero,
                       onChanged: (value) {
                         setState(() {
-                          gender = Gender.female;
+                          gender = Gender.male;
                         });
-                      },
-                    ),
-                  ),
-                ],
-              ),
-            ],
-          ),
-          Padding(
-            padding: const EdgeInsets.only(top: 8.0, bottom: 24),
-            child: ElevatedButton.icon(
-                onPressed: () {
-                  Navigator.push(
-                      context,
-                      MaterialPageRoute(
-                          builder: (BuildContext context) => const MainPage()));
-                },
-                style: ElevatedButton.styleFrom(
-                    backgroundColor: const Color(0xFFF77D8E),
-                    minimumSize: const Size(double.infinity, 56),
-                    shape: const RoundedRectangleBorder(
-                        borderRadius: BorderRadius.only(
-                      topLeft: Radius.circular(10),
-                      topRight: Radius.circular(25),
-                      bottomLeft: Radius.circular(25),
-                      bottomRight: Radius.circular(25),
-                    ))),
-                icon: Icon(
-                  CupertinoIcons.arrow_right,
-                  color: Color(0xFFFE003),
+                      }),
                 ),
-                label: Text("Sign Up")),
-          )
-        ],
-      )),
-    );
+                Expanded(
+                  child: RadioListTile(
+                    title: const Text("Female"),
+                    value: Gender.female,
+                    groupValue: gender,
+                    visualDensity: const VisualDensity(
+                      horizontal: VisualDensity.minimumDensity,
+                      vertical: VisualDensity.minimumDensity,
+                    ),
+                    contentPadding: EdgeInsets.zero,
+                    onChanged: (value) {
+                      setState(() {
+                        gender = Gender.female;
+                      });
+                    },
+                  ),
+                ),
+              ],
+            ),
+          ],
+        ),
+        Padding(
+          padding: const EdgeInsets.only(top: 18.0, bottom: 24),
+          child: ElevatedButton.icon(
+              onPressed: () {
+                Navigator.push(
+                    context,
+                    MaterialPageRoute(
+                        builder: (BuildContext context) => const MainPage()));
+              },
+              style: ElevatedButton.styleFrom(
+                  backgroundColor:
+                      Theme.of(context).brightness == Brightness.light
+                          ? MyColors.lightPrimaryColor
+                          : MyColors.darkPrimaryColor,
+                  minimumSize: const Size(double.infinity, 56),
+                  shape: const RoundedRectangleBorder(
+                      borderRadius: BorderRadius.only(
+                    topLeft: Radius.circular(10),
+                    topRight: Radius.circular(25),
+                    bottomLeft: Radius.circular(25),
+                    bottomRight: Radius.circular(25),
+                  ))),
+              icon: const Icon(
+                CupertinoIcons.arrow_right,
+                color: Colors.white,
+              ),
+              label: const Text("Sign Up")),
+        )
+      ],
+    ));
   }
 }

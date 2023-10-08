@@ -21,12 +21,9 @@ class SignUpForm extends StatelessWidget {
           child: TextFormField(
             decoration: InputDecoration(
               hintText: "Enter your email",
-              focusedBorder: OutlineInputBorder(
-                borderRadius: BorderRadius.circular(20),
-                borderSide: BorderSide(
-                  color: MyColors.lightFontColor,
-                ),
-              ),
+              border: OutlineInputBorder(
+                  borderRadius: BorderRadius.circular(25),
+                  borderSide: BorderSide(color: Colors.blue)),
               floatingLabelBehavior: FloatingLabelBehavior.always,
               prefixIcon: Padding(
                 padding: const EdgeInsets.symmetric(horizontal: 8),
@@ -45,12 +42,9 @@ class SignUpForm extends StatelessWidget {
             obscureText: true,
             decoration: InputDecoration(
               hintText: "Enter your password",
-              focusedBorder: OutlineInputBorder(
-                borderRadius: BorderRadius.circular(20),
-                borderSide: BorderSide(
-                  color: MyColors.lightFontColor,
-                ),
-              ),
+              border: OutlineInputBorder(
+                  borderRadius: BorderRadius.circular(25),
+                  borderSide: BorderSide(color: Colors.blue)),
               floatingLabelBehavior: FloatingLabelBehavior.always,
               prefixIcon: Padding(
                 padding: const EdgeInsets.symmetric(horizontal: 8),
@@ -68,12 +62,9 @@ class SignUpForm extends StatelessWidget {
           child: TextFormField(
             decoration: InputDecoration(
               hintText: "Enter your Password again",
-              focusedBorder: OutlineInputBorder(
-                borderRadius: BorderRadius.circular(20),
-                borderSide: BorderSide(
-                  color: MyColors.lightFontColor,
-                ),
-              ),
+              border: OutlineInputBorder(
+                  borderRadius: BorderRadius.circular(25),
+                  borderSide: BorderSide(color: Colors.blue)),
               floatingLabelBehavior: FloatingLabelBehavior.always,
               prefixIcon: Padding(
                 padding: const EdgeInsets.symmetric(horizontal: 8),
@@ -97,7 +88,8 @@ class SignUpForm extends StatelessWidget {
               },
               style: ElevatedButton.styleFrom(
                   foregroundColor: Colors.white,
-                  backgroundColor: Theme.of(context).brightness == Brightness.dark
+                  backgroundColor:
+                      Theme.of(context).brightness == Brightness.light
                           ? MyColors.lightPrimaryColor
                           : MyColors.darkPrimaryColor,
                   minimumSize: const Size(double.infinity, 56),

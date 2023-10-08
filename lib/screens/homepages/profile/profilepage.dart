@@ -13,7 +13,7 @@ class Profilepage extends StatelessWidget {
         elevation: 0.0,
         centerTitle: true,
         automaticallyImplyLeading: false,
-        title: Text(
+        title: const Text(
           'Profile',
           style: TextStyle(
             fontFamily: "Poppins",
@@ -38,7 +38,8 @@ class Profilepage extends StatelessWidget {
                         color: Colors.grey.withOpacity(0.4),
                         spreadRadius: 1,
                         blurRadius: 5,
-                        offset: Offset(1, 2), // changes position of shadow
+                        offset:
+                            const Offset(1, 2), // changes position of shadow
                       ),
                     ],
                     color: MyColors.lightBackgroundColor.withOpacity(0.96),
@@ -69,10 +70,7 @@ class Profilepage extends StatelessWidget {
                               style: TextStyle(
                                 fontSize: 20,
                                 fontFamily: "Poppins",
-                                color: Theme.of(context).brightness ==
-                                        Brightness.dark
-                                    ? Colors.white
-                                    : Colors.black,
+                                color:  Colors.black,
                                 fontWeight: FontWeight.bold,
                               ),
                             ),
@@ -81,19 +79,16 @@ class Profilepage extends StatelessWidget {
                               'See Your Profile',
                               style: TextStyle(
                                 fontSize: 15,
-                                color: Theme.of(context).brightness ==
-                                        Brightness.dark
-                                    ? Colors.white
-                                    : Colors.black,
+                                color: Colors.black,
                               ),
                             ),
                           ],
                         ),
                       ),
-                      Expanded(
+                      const Expanded(
                         child: SizedBox(),
                       ),
-                      Padding(
+                      const Padding(
                         padding: EdgeInsets.only(right: 10.0),
                         child: Icon(
                           Icons.edit_attributes_rounded,
@@ -122,7 +117,8 @@ class Profilepage extends StatelessWidget {
                         color: Colors.grey.withOpacity(0.4),
                         spreadRadius: 1,
                         blurRadius: 5,
-                        offset: Offset(1, 2), // changes position of shadow
+                        offset:
+                            const Offset(1, 2), // changes position of shadow
                       ),
                     ],
                     color: MyColors.lightBackgroundColor,
@@ -154,10 +150,7 @@ class Profilepage extends StatelessWidget {
                                 'Partners Profile',
                                 style: TextStyle(
                                   fontFamily: "Poppins",
-                                  color: Theme.of(context).brightness ==
-                                        Brightness.dark
-                                    ? Colors.white
-                                    : Colors.black,
+                                  color: Colors.black,
                                   fontSize: 20,
                                   fontWeight: FontWeight.bold,
                                 ),
@@ -167,10 +160,7 @@ class Profilepage extends StatelessWidget {
                                 'See Their Profile',
                                 style: TextStyle(
                                   fontSize: 15,
-                                  color: Theme.of(context).brightness ==
-                                        Brightness.dark
-                                    ? Colors.white
-                                    : Colors.black,
+                                  color:  Colors.black,
                                 ),
                               ),
                             ],
@@ -210,8 +200,8 @@ class Profilepage extends StatelessWidget {
                 ),
               ),
             ),
-            Padding(
-              padding: const EdgeInsets.all(12.0),
+            const Padding(
+              padding: EdgeInsets.all(12.0),
               child: Column(
                 children: [
                   Row(
@@ -219,7 +209,6 @@ class Profilepage extends StatelessWidget {
                       ProfileButtons(
                         icon: Icon(
                           Icons.workspace_premium_sharp,
-                          color: Color(0xFFEA7686),
                           size: 40,
                         ),
                         name: "Premium",
@@ -228,20 +217,18 @@ class Profilepage extends StatelessWidget {
                           icon: Icon(
                             Icons.calendar_month_rounded,
                             //Icons.miscellaneous_services_rounded,
-                            color: Color(0xFFEA7686),
                             size: 40,
                           ),
                           name: "Calendar"),
                       ProfileButtons(
                           icon: Icon(
                             Icons.lock_person,
-                            color: Color(0xFFEA7686),
                             size: 40,
                           ),
                           name: "Private"),
                     ],
                   ),
-                  const SizedBox(
+                  SizedBox(
                     height: 16,
                   ),
                   Row(
@@ -249,21 +236,18 @@ class Profilepage extends StatelessWidget {
                       ProfileButtons(
                           icon: Icon(
                             Icons.screen_share,
-                            color: Color(0xFFEA7686),
                             size: 40,
                           ),
                           name: "Watch"),
                       ProfileButtons(
                           icon: Icon(
                             Icons.note,
-                            color: Color(0xFFEA7686),
                             size: 40,
                           ),
                           name: "Diary"),
                       ProfileButtons(
                           icon: Icon(
                             Icons.photo_album,
-                            color: Color(0xFFEA7686),
                             size: 40,
                           ),
                           name: "Memories"),
@@ -275,189 +259,167 @@ class Profilepage extends StatelessWidget {
             const SizedBox(
               height: 10,
             ),
-            GestureDetector(
-              onTap: () {
-                print("Settings & Privacy");
-              },
-              child: Padding(
-                padding: const EdgeInsets.all(16.0),
-                child: Container(
-                  width: 400,
-                  height: 70,
-                  decoration: BoxDecoration(
-                    boxShadow: [
-                      BoxShadow(
-                        color: Colors.grey.withOpacity(0.4),
-                        spreadRadius: 1,
-                        blurRadius: 5,
-                        offset:
-                            const Offset(1, 2), // changes position of shadow
-                      ),
-                    ],
-                    color: MyColors.lightBackgroundColor,
-                    borderRadius: BorderRadius.circular(30),
-                  ),
-                  child: Row(
-                    children: [
-                      Padding(
-                        padding: const EdgeInsets.all(10.0),
-                        child: CircleAvatar(
-                          radius: 35,
-                          backgroundColor: MyColors.lightBackgroundColor,
-                          child: Icon(
-                            Icons.settings,
-                            color: Color(0xFFEA7686),
-                            size: 40,
-                          ),
-                        ),
-                      ),
-                      Padding(
-                        padding: EdgeInsets.all(5.0),
-                        child: Column(
-                          mainAxisAlignment: MainAxisAlignment.center,
-                          crossAxisAlignment: CrossAxisAlignment.start,
-                          children: [
-                            Text(
-                              'Settings & Privacy',
-                              style: TextStyle(
-                                  fontSize: 18,
-                                  fontFamily: "Poppins",
-                                  color: Theme.of(context).brightness ==
-                                        Brightness.dark
-                                    ? Colors.white
-                                    : Colors.black,
-                                  fontWeight: FontWeight.bold),
-                            ),
-                          ],
-                        ),
-                      ),
-                    ],
-                  ),
+            Padding(
+              padding: const EdgeInsets.all(16.0),
+              child: Container(
+                width: 400,
+                height: 70,
+                decoration: BoxDecoration(
+                  boxShadow: [
+                    BoxShadow(
+                      color: Colors.grey.withOpacity(0.4),
+                      spreadRadius: 1,
+                      blurRadius: 5,
+                      offset: const Offset(1, 2), // changes position of shadow
+                    ),
+                  ],
+                  color: MyColors.lightBackgroundColor,
+                  borderRadius: BorderRadius.circular(30),
                 ),
-              ),
-            ),
-            GestureDetector(
-              onTap: () {
-                print("Settings & Privacy");
-              },
-              child: Padding(
-                padding: const EdgeInsets.only(left: 16, right: 16, bottom: 16),
-                child: Container(
-                  width: 400,
-                  height: 70,
-                  decoration: BoxDecoration(
-                    boxShadow: [
-                      BoxShadow(
-                        color: Colors.grey.withOpacity(0.4),
-                        spreadRadius: 1,
-                        blurRadius: 5,
-                        offset:
-                            const Offset(1, 2), // changes position of shadow
-                      ),
-                    ],
-                    color: MyColors.lightBackgroundColor,
-                    borderRadius: BorderRadius.circular(30),
-                  ),
-                  child: Row(
-                    children: [
-                      Padding(
-                        padding: const EdgeInsets.all(10.0),
-                        child: CircleAvatar(
-                          radius: 35,
-                          backgroundColor: MyColors.lightBackgroundColor,
-                          child: Icon(
-                            Icons.person_2,
-                            color: Color(0xFFEA7686),
-                            size: 40,
-                          ),
+                child: Row(
+                  children: [
+                    Padding(
+                      padding: const EdgeInsets.all(10.0),
+                      child: CircleAvatar(
+                        radius: 35,
+                        backgroundColor: MyColors.lightBackgroundColor,
+                        child: const Icon(
+                          Icons.settings,
+                          size: 40,
                         ),
                       ),
-                      Padding(
-                        padding: EdgeInsets.all(5.0),
-                        child: Column(
-                          mainAxisAlignment: MainAxisAlignment.center,
-                          crossAxisAlignment: CrossAxisAlignment.start,
-                          children: [
-                            Text(
-                              'About Developer',
-                              style: TextStyle(
+                    ),
+                    Padding(
+                      padding: const EdgeInsets.all(5.0),
+                      child: Column(
+                        mainAxisAlignment: MainAxisAlignment.center,
+                        crossAxisAlignment: CrossAxisAlignment.start,
+                        children: [
+                          Text(
+                            'Settings & Privacy',
+                            style: TextStyle(
+                                fontSize: 18,
                                 fontFamily: "Poppins",
                                 color: Theme.of(context).brightness ==
                                         Brightness.dark
-                                    ? Colors.white
+                                    ? Colors.black
                                     : Colors.black,
-                                fontSize: 18,
-                                fontWeight: FontWeight.bold,
-                                
-                              ),
-                            ),
-                          ],
-                        ),
+                                fontWeight: FontWeight.bold),
+                          ),
+                        ],
                       ),
-                    ],
-                  ),
+                    ),
+                  ],
                 ),
               ),
             ),
-            GestureDetector(
-              onTap: () {
-                print("Settings & Privacy");
-              },
-              child: Padding(
-                padding: const EdgeInsets.only(left: 16, right: 16, bottom: 16),
-                child: Container(
-                  width: 400,
-                  height: 70,
-                  decoration: BoxDecoration(
-                    boxShadow: [
-                      BoxShadow(
-                        color: Colors.grey.withOpacity(0.4),
-                        spreadRadius: 1,
-                        blurRadius: 5,
-                        offset:
-                            const Offset(1, 2), // changes position of shadow
-                      ),
-                    ],
-                    color: MyColors.lightBackgroundColor,
-                    borderRadius: BorderRadius.circular(30),
-                  ),
-                  child: Row(
-                    children: [
-                      Padding(
-                        padding: const EdgeInsets.all(10.0),
-                        child: CircleAvatar(
-                          radius: 35,
-                          backgroundColor: MyColors.lightBackgroundColor,
-                          child: Icon(
-                            Icons.logout_rounded,
-                            color: Colors.red[700],
-                            size: 40,
-                          ),
+            Padding(
+              padding: const EdgeInsets.only(left: 16, right: 16, bottom: 16),
+              child: Container(
+                width: 400,
+                height: 70,
+                decoration: BoxDecoration(
+                  boxShadow: [
+                    BoxShadow(
+                      color: Colors.grey.withOpacity(0.4),
+                      spreadRadius: 1,
+                      blurRadius: 5,
+                      offset: const Offset(1, 2), // changes position of shadow
+                    ),
+                  ],
+                  color: MyColors.lightBackgroundColor,
+                  borderRadius: BorderRadius.circular(30),
+                ),
+                child: Row(
+                  children: [
+                    const Padding(
+                      padding: EdgeInsets.all(10.0),
+                      child: CircleAvatar(
+                        radius: 35,
+                        child: Icon(
+                          Icons.person_2,
+                          size: 40,
                         ),
                       ),
-                      Padding(
-                        padding: EdgeInsets.all(5.0),
-                        child: Column(
-                          mainAxisAlignment: MainAxisAlignment.center,
-                          crossAxisAlignment: CrossAxisAlignment.start,
-                          children: [
-                            Text(
-                              'Signout',
-                              style: TextStyle(
-                                fontFamily: "Poppins",
-                                fontSize: 18,
-                                color: Theme.of(context).brightness ==
-                                        Brightness.dark
-                                    ? Colors.white
-                                    : Colors.black,
-                                fontWeight: FontWeight.bold,
-                              ),
+                    ),
+                    Padding(
+                      padding: const EdgeInsets.all(5.0),
+                      child: Column(
+                        mainAxisAlignment: MainAxisAlignment.center,
+                        crossAxisAlignment: CrossAxisAlignment.start,
+                        children: [
+                          Text(
+                            'About Developer',
+                            style: TextStyle(
+                              fontFamily: "Poppins",
+                              color: Theme.of(context).brightness ==
+                                      Brightness.dark
+                                  ? Colors.black
+                                  : Colors.black,
+                              fontSize: 18,
+                              fontWeight: FontWeight.bold,
                             ),
-                          ],
+                          ),
+                        ],
+                      ),
+                    ),
+                  ],
+                ),
+              ),
+            ),
+            Padding(
+              padding: const EdgeInsets.only(left: 16, right: 16, bottom: 16),
+              child: Container(
+                width: 400,
+                height: 70,
+                decoration: BoxDecoration(
+                  boxShadow: [
+                    BoxShadow(
+                      color: Colors.grey.withOpacity(0.4),
+                      spreadRadius: 1,
+                      blurRadius: 5,
+                      offset: const Offset(1, 2), // changes position of shadow
+                    ),
+                  ],
+                  color: MyColors.lightBackgroundColor,
+                  borderRadius: BorderRadius.circular(30),
+                ),
+                child: Row(
+                  children: [
+                    Padding(
+                      padding: const EdgeInsets.all(10.0),
+                      child: CircleAvatar(
+                        radius: 35,
+                        backgroundColor: MyColors.lightBackgroundColor,
+                        child: Icon(
+                          Icons.logout_rounded,
+                          color: Colors.red[700],
+                          size: 40,
                         ),
                       ),
-                    ],
-                  ),
+                    ),
+                    Padding(
+                      padding: const EdgeInsets.all(5.0),
+                      child: Column(
+                        mainAxisAlignment: MainAxisAlignment.center,
+                        crossAxisAlignment: CrossAxisAlignment.start,
+                        children: [
+                          Text(
+                            'Signout',
+                            style: TextStyle(
+                              fontFamily: "Poppins",
+                              fontSize: 18,
+                              color: Theme.of(context).brightness ==
+                                      Brightness.dark
+                                  ? Colors.black
+                                  : Colors.black,
+                              fontWeight: FontWeight.bold,
+                            ),
+                          ),
+                        ],
+                      ),
+                    ),
+                  ],
                 ),
               ),
             ),

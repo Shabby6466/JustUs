@@ -32,6 +32,7 @@ class AnimatedBtn extends StatelessWidget {
                 children: [
                   const Icon(
                     CupertinoIcons.arrow_right,
+                    color: Colors.black,
                     size: 24,
                   ),
                   Text(" Connect",
@@ -39,7 +40,7 @@ class AnimatedBtn extends StatelessWidget {
 
                           TextStyle(fontSize: 20,
                           color: Theme.of(context).brightness == Brightness.dark
-                              ? Colors.white
+                              ? Colors.black
                               : Colors.black,
                            fontWeight: FontWeight.w600)),
                 ],

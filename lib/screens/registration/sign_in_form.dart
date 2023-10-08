@@ -23,12 +23,9 @@ class SignInForm extends StatelessWidget {
           child: TextFormField(
             decoration: InputDecoration(
               hintText: "Enter your email",
-              focusedBorder: OutlineInputBorder(
-                borderRadius: BorderRadius.circular(20),
-                borderSide: BorderSide(
-                  color: Colors.red,
-                ),
-              ),
+              border: OutlineInputBorder(
+                  borderRadius: BorderRadius.circular(25),
+                  borderSide: BorderSide(color: Colors.blue)),
               floatingLabelBehavior: FloatingLabelBehavior.always,
               prefixIcon: Padding(
                 padding: const EdgeInsets.symmetric(horizontal: 8),
@@ -47,12 +44,9 @@ class SignInForm extends StatelessWidget {
             obscureText: true,
             decoration: InputDecoration(
               hintText: "Enter your password",
-              focusedBorder: OutlineInputBorder(
-                borderRadius: BorderRadius.circular(20),
-                borderSide: BorderSide(
-                  color: Colors.red,
-                ),
-              ),
+              border: OutlineInputBorder(
+                  borderRadius: BorderRadius.circular(25),
+                  borderSide: BorderSide(color: Colors.blue)),
               floatingLabelBehavior: FloatingLabelBehavior.always,
               prefixIcon: Padding(
                 padding: const EdgeInsets.symmetric(horizontal: 8),
@@ -65,7 +59,7 @@ class SignInForm extends StatelessWidget {
           ),
         ),
         Padding(
-          padding: const EdgeInsets.only(top: 18.0, bottom: 24),
+          padding: const EdgeInsets.only(top: 18.0, bottom: 16),
           child: ElevatedButton.icon(
               onPressed: () {
                 Navigator.push(
@@ -76,7 +70,7 @@ class SignInForm extends StatelessWidget {
               style: ElevatedButton.styleFrom(
                   foregroundColor: Colors.white,
                   backgroundColor:
-                      Theme.of(context).brightness == Brightness.dark
+                      Theme.of(context).brightness == Brightness.light
                           ? MyColors.lightPrimaryColor
                           : MyColors.darkPrimaryColor,
                   minimumSize: const Size(double.infinity, 56),

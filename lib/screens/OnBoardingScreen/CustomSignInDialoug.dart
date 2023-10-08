@@ -23,7 +23,7 @@ Future<Object?> customSignInDialogue(BuildContext context) {
           Center(
               child: SingleChildScrollView(
             child: Container(
-              height: 620,
+              height: 570,
               margin: const EdgeInsets.symmetric(horizontal: 20),
               padding: const EdgeInsets.symmetric(horizontal: 20, vertical: 30),
               decoration: BoxDecoration(
@@ -33,9 +33,7 @@ Future<Object?> customSignInDialogue(BuildContext context) {
                 borderRadius: BorderRadius.circular(40),
               ),
               child: Scaffold(
-                  backgroundColor: Theme.of(context).brightness == Brightness.light
-                    ? Colors.transparent
-                    : MyColors.darkBackgroundColor.withOpacity(0.8),
+                backgroundColor: Colors.transparent,
                   body: Stack(
                     clipBehavior: Clip.none,
                     children: [
@@ -58,36 +56,36 @@ Future<Object?> customSignInDialogue(BuildContext context) {
                                 )),
                           ),
                           const SignInForm(),
-                          Row(
-                            children: [
-                              Expanded(
-                                child: Divider(
-                                  color: Theme.of(context).brightness ==
-                                          Brightness.dark
-                                      ? Colors.black
-                                      : Colors.white,
-                                ),
-                              ),
-                              Padding(
-                                padding:
-                                    const EdgeInsets.symmetric(horizontal: 16),
-                                child: Text(
-                                  "OR",
-                                  style: TextStyle(),
-                                ),
-                              ),
-                              Expanded(
-                                child: Divider(
-                                  color: Theme.of(context).brightness ==
-                                          Brightness.dark
-                                     ? Colors.black
-                                      : Colors.white,
-                                ),
-                              ),
-                            ],
-                          ),
+                          // Row(
+                          //   children: [
+                          //     Expanded(
+                          //       child: Divider(
+                          //         color: Theme.of(context).brightness ==
+                          //                 Brightness.dark
+                          //             ? Colors.black
+                          //             : Colors.white,
+                          //       ),
+                          //     ),
+                          //     Padding(
+                          //       padding:
+                          //           const EdgeInsets.symmetric(horizontal: 16),
+                          //       child: Text(
+                          //         "OR",
+                          //         style: TextStyle(),
+                          //       ),
+                          //     ),
+                          //     Expanded(
+                          //       child: Divider(
+                          //         color: Theme.of(context).brightness ==
+                          //                 Brightness.dark
+                          //            ? Colors.black
+                          //             : Colors.white,
+                          //       ),
+                          //     ),
+                          //   ],
+                          // ),
                           const Padding(
-                            padding: EdgeInsets.symmetric(vertical: 24),
+                            padding: EdgeInsets.symmetric(vertical: 20),
                             child: Text(
                               "Signup with Google or Facebook",
                               style: TextStyle(),

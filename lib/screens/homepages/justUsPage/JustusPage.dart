@@ -121,10 +121,7 @@ class _JustUsState extends State<JustUs> {
                                         constraints: const BoxConstraints(
                                             maxWidth: 80, maxHeight: 80),
                                         decoration: BoxDecoration(
-                                          color: Theme.of(context).brightness ==
-                                                  Brightness.dark
-                                              ? Colors.black
-                                              : Colors.white,
+                                          color: Colors.blue[400],
                                           borderRadius:
                                               BorderRadius.circular(20),
                                         ),
@@ -158,10 +155,7 @@ class _JustUsState extends State<JustUs> {
                                         constraints: const BoxConstraints(
                                             maxWidth: 80, maxHeight: 80),
                                         decoration: BoxDecoration(
-                                          color: Theme.of(context).brightness ==
-                                                  Brightness.dark
-                                              ? Colors.black
-                                              : Colors.white,
+                                          color: Colors.blue[400],
                                           borderRadius:
                                               BorderRadius.circular(20),
                                         ),
@@ -198,10 +192,7 @@ class _JustUsState extends State<JustUs> {
                                         constraints: const BoxConstraints(
                                             maxWidth: 80, maxHeight: 80),
                                         decoration: BoxDecoration(
-                                          color: Theme.of(context).brightness ==
-                                                  Brightness.dark
-                                              ? Colors.black
-                                              : Colors.white,
+                                          color: Colors.blue[400],
                                           borderRadius:
                                               BorderRadius.circular(20),
                                         ),
@@ -260,10 +251,13 @@ class _JustUsState extends State<JustUs> {
                     decoration: BoxDecoration(
                       boxShadow: [
                         BoxShadow(
-                          color: Colors.grey.withOpacity(0.4),
+                          color:
+                              Theme.of(context).brightness == Brightness.light
+                                  ? Colors.grey.withOpacity(0.4)
+                                  : Colors.transparent,
                           spreadRadius: 1,
                           blurRadius: 5,
-                          offset: Offset(1, 2), // changes position of shadow
+                          offset: Offset(1, 2),
                         ),
                       ],
                       color: Theme.of(context).brightness == Brightness.dark

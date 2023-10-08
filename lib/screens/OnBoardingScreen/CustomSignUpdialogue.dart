@@ -38,11 +38,17 @@ Future<Object?> customSignUpDialogue(BuildContext context) {
                     children: [
                       Column(
                         children: [
-                          Text(
-                            "Sign Up",
-                            style: TextStyle(
-                              fontSize: 34,
-                              fontWeight: FontWeight.w800,
+                          GestureDetector(
+                            onTap: () {
+                              print(
+                                 " ${Theme.of(context).brightness}");
+                            },
+                            child: Text(
+                              "Sign Up",
+                              style: TextStyle(
+                                fontSize: 34,
+                                fontWeight: FontWeight.w800,
+                              ),
                             ),
                           ),
                           Padding(

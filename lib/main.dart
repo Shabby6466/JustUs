@@ -16,6 +16,7 @@ class MyApp extends StatelessWidget {
       debugShowCheckedModeBanner: false,
       themeMode: ThemeMode.system,
       theme: ThemeData(
+        brightness: Brightness.light,
         scaffoldBackgroundColor: MyColors.lightBackgroundColor,
         fontFamily: 'Intel',
         appBarTheme: AppBarTheme(
@@ -49,26 +50,25 @@ class MyApp extends StatelessWidget {
           titleMedium: TextStyle(
             color: MyColors.lightFontColor,
           ),
-          titleSmall: TextStyle(
+          titleSmall: const TextStyle(
             color: Colors.red,
           ),
         ),
-        
         iconTheme: IconThemeData(
-          color: MyColors.darkFontColor,
+          color: MyColors.lightPrimaryColor,
         ),
         inputDecorationTheme: InputDecorationTheme(
           filled: true,
-          fillColor: MyColors.lightBackgroundColor.withOpacity(0.96),
-          errorStyle: TextStyle(height: 0),
+          fillColor: MyColors.lightPrimaryColor.withOpacity(0.1),
+          errorStyle: const TextStyle(height: 0),
           border: defaultInputBorder,
           enabledBorder: defaultInputBorder,
           focusedBorder: defaultInputBorder,
           errorBorder: defaultInputBorder,
         ),
       ),
-
       darkTheme: ThemeData(
+        brightness: Brightness.dark,
         scaffoldBackgroundColor: MyColors.darkBackgroundColor,
         fontFamily: 'Intel',
         appBarTheme: AppBarTheme(
@@ -102,18 +102,21 @@ class MyApp extends StatelessWidget {
           titleMedium: TextStyle(
             color: MyColors.darkFontColor,
           ),
-          titleSmall: TextStyle(
+          titleSmall: const TextStyle(
             color: Colors.red,
           ),
         ),
         inputDecorationTheme: InputDecorationTheme(
           filled: true,
           hintStyle: TextStyle(color: MyColors.darkFontColor),
-          fillColor: MyColors.darkBackgroundColor.withOpacity(0.96),
-          errorStyle: TextStyle(height: 0),
+          fillColor: MyColors.darkBackground2.withOpacity(0.96),
+          errorStyle: const TextStyle(height: 0),
+          focusedBorder: simpleInputBorder,
           border: defaultInputBorder,
-          focusedBorder: defaultInputBorder,
           errorBorder: defaultInputBorder,
+        ),
+        iconTheme: IconThemeData(
+          color: MyColors.darkPrimaryColor,
         ),
       ),
       home: const OnboardingScreen(),
@@ -121,10 +124,18 @@ class MyApp extends StatelessWidget {
   }
 }
 
-final defaultInputBorder = OutlineInputBorder(
-  borderRadius: const BorderRadius.all(Radius.circular(16)),
+const simpleInputBorder = OutlineInputBorder(
+  borderRadius: BorderRadius.all(Radius.circular(25)),
   borderSide: BorderSide(
-    color: Colors.transparent,
+    color: Colors.red,
+    width: 1,
+  ),
+);
+
+const defaultInputBorder = OutlineInputBorder(
+  borderRadius: BorderRadius.all(Radius.circular(25)),
+  borderSide: BorderSide(
+    color: Colors.red,
     width: 1,
   ),
 );
