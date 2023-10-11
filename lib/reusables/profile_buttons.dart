@@ -1,3 +1,5 @@
+// ignore_for_file: prefer_const_constructors
+
 import 'package:flutter/material.dart';
 import 'package:justus/reusables/MyColors.dart';
 
@@ -31,7 +33,6 @@ class ProfileButtons extends StatelessWidget {
           child: InkWell(
             onLongPress: () {},
             onTap: () {
-              print("split tapped");
             },
             borderRadius: BorderRadius.circular(35),
             child: Padding(

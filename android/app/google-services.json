@@ -1,13 +1,13 @@
 {
   "project_info": {
-    "project_number": "925943315989",
-    "project_id": "justus-87463",
-    "storage_bucket": "justus-87463.appspot.com"
+    "project_number": "627370343365",
+    "project_id": "justus-e7024",
+    "storage_bucket": "justus-e7024.appspot.com"
   },
   "client": [
     {
       "client_info": {
-        "mobilesdk_app_id": "1:925943315989:android:7785ba73037007f1ca181c",
+        "mobilesdk_app_id": "1:627370343365:android:15ed16466c3f370ff5a9ac",
         "android_client_info": {
           "package_name": "com.example.justus"
         }
@@ -15,7 +15,7 @@
       "oauth_client": [],
       "api_key": [
         {
-          "current_key": "AIzaSyBe5p1UUBYomg1hyOD9CYg1Fi6r_Co1ZAY"
+          "current_key": "AIzaSyCpTyLX8alo52ovDledHYp3ijejoKiQvqw"
         }
       ],
       "services": {

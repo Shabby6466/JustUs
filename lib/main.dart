@@ -1,8 +1,11 @@
+// ignore_for_file: prefer_const_constructors, depend_on_referenced_packages
+
 import 'package:flutter/material.dart';
 import 'package:justus/reusables/MyColors.dart';
+import 'package:get/get.dart';
 import 'package:justus/screens/OnBoardingScreen/OnboardingScreen.dart';
 
-void main() {
+void main()  {;
   runApp(const MyApp());
 }
 
@@ -12,7 +15,7 @@ class MyApp extends StatelessWidget {
   // This widget is the root of your application.
   @override
   Widget build(BuildContext context) {
-    return MaterialApp(
+    return GetMaterialApp(
       debugShowCheckedModeBanner: false,
       themeMode: ThemeMode.system,
       theme: ThemeData(
@@ -119,7 +122,7 @@ class MyApp extends StatelessWidget {
           color: MyColors.darkPrimaryColor,
         ),
       ),
-      home: const OnboardingScreen(),
+      home:  OnboardingScreen(),
     );
   }
 }

@@ -1,3 +1,5 @@
+// ignore_for_file: file_names, prefer_const_constructors
+
 import 'package:flutter/material.dart';
 import 'package:justus/reusables/MyColors.dart';
 import 'package:justus/screens/OnBoardingScreen/signUpform.dart';
@@ -40,8 +42,6 @@ Future<Object?> customSignUpDialogue(BuildContext context) {
                         children: [
                           GestureDetector(
                             onTap: () {
-                              print(
-                                 " ${Theme.of(context).brightness}");
                             },
                             child: Text(
                               "Sign Up",

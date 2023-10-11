@@ -2,7 +2,7 @@ import 'package:flutter/cupertino.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter_svg/flutter_svg.dart';
 import 'package:justus/reusables/MyColors.dart';
-import 'package:justus/screens/mainpage.dart';
+import 'package:justus/reusables/Navigationbar.dart';
 
 enum Gender { none, male, female }
 
@@ -165,7 +165,7 @@ class _EditFormState extends State<EditForm> {
                 Navigator.push(
                     context,
                     MaterialPageRoute(
-                        builder: (BuildContext context) => const MainPage()));
+                        builder: (BuildContext context) => SwipeNavigation()));
               },
               style: ElevatedButton.styleFrom(
                   backgroundColor:

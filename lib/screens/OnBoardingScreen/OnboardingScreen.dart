@@ -1,3 +1,5 @@
+// ignore_for_file: prefer_const_constructors, unnecessary_import, depend_on_referenced_packages, file_names, prefer_const_literals_to_create_immutables
+
 import 'dart:ui';
 import 'package:flutter/cupertino.dart';
 import 'package:flutter/material.dart';

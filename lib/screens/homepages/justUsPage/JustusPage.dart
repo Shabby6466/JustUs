@@ -1,3 +1,5 @@
+// ignore_for_file: prefer_const_constructors, avoid_unnecessary_containers, prefer_const_constructors_in_immutables, file_names
+
 import 'package:flutter/cupertino.dart';
 import 'package:flutter/material.dart';
 
@@ -277,7 +279,7 @@ class _JustUsState extends State<JustUs> {
                     CircleAvatar(
                       backgroundColor:
                           Theme.of(context).brightness == Brightness.dark
-                              ? Colors.black
+                              ? Colors.yellow[100]
                               : Colors.pink,
                       radius: 40,
                     ),

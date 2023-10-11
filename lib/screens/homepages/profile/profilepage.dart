@@ -1,6 +1,10 @@
+// ignore_for_file: prefer_const_constructors, prefer_const_literals_to_create_immutables, sort_child_properties_last
+
 import 'package:flutter/material.dart';
 import 'package:justus/reusables/MyColors.dart';
 import 'package:justus/reusables/profile_buttons.dart';
+import 'package:justus/screens/homepages/profile/partners_profile.dart';
+import 'package:justus/screens/homepages/profile/user_profile.dart';
 
 class Profilepage extends StatelessWidget {
   const Profilepage({Key? key}) : super(key: key);
@@ -28,7 +32,13 @@ class Profilepage extends StatelessWidget {
             Padding(
               padding: const EdgeInsets.all(16.0),
               child: GestureDetector(
-                onTap: () {},
+                onTap: () {
+                  Navigator.push(
+                      context,
+                      MaterialPageRoute(
+                        builder: (BuildContext) => UserProfile(),
+                      ));
+                },
                 child: Container(
                   width: 400,
                   height: 100,
@@ -70,7 +80,7 @@ class Profilepage extends StatelessWidget {
                               style: TextStyle(
                                 fontSize: 20,
                                 fontFamily: "Poppins",
-                                color:  Colors.black,
+                                color: Colors.black,
                                 fontWeight: FontWeight.bold,
                               ),
                             ),
@@ -106,7 +116,11 @@ class Profilepage extends StatelessWidget {
                   const EdgeInsets.only(left: 16.0, right: 16.0, bottom: 16.0),
               child: GestureDetector(
                 onTap: () {
-                  print("partners");
+                  Navigator.push(
+                      context,
+                      MaterialPageRoute(
+                        builder: (BuildContext) => PartnersProfile(),
+                      ));
                 },
                 child: Container(
                   width: 400,
@@ -160,7 +174,7 @@ class Profilepage extends StatelessWidget {
                                 'See Their Profile',
                                 style: TextStyle(
                                   fontSize: 15,
-                                  color:  Colors.black,
+                                  color: Colors.black,
                                 ),
                               ),
                             ],
@@ -200,7 +214,7 @@ class Profilepage extends StatelessWidget {
                 ),
               ),
             ),
-            const Padding(
+            Padding(
               padding: EdgeInsets.all(12.0),
               child: Column(
                 children: [
@@ -244,7 +258,7 @@ class Profilepage extends StatelessWidget {
                             Icons.note,
                             size: 40,
                           ),
-                          name: "Diary"),
+                          name: "Notes"),
                       ProfileButtons(
                           icon: Icon(
                             Icons.photo_album,

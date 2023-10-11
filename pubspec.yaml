@@ -28,17 +28,23 @@ environment:
 # the latest version available on pub.dev. To see which dependencies have newer
 # versions available, run `flutter pub outdated`.
 dependencies:
+  cloud_firestore: ^4.9.3
   cupertino_icons: ^1.0.2
   flutter:
     sdk: flutter
+  flutter_floating_bottom_bar: ^1.2.0
   flutter_svg: ^2.0.7
 
 dev_dependencies:
+  animated_radial_menu: ^0.0.1
   convex_bottom_bar: ^3.2.0
+  firebase_auth: ^4.10.1
   firebase_core: ^2.16.0
+  firebase_database: ^10.2.7
   flutter_lints: ^2.0.0
   flutter_test:
     sdk: flutter
+  get: ^4.6.6
   image_cropper: ^5.0.0
   image_picker: ^1.0.4
   rive: ^0.11.17
@@ -57,6 +63,7 @@ flutter:
   assets:
     - assets/icons/
     - assets/RivAssets/
+    - assets/buttons_svg/
   #   - images/a_dot_ham.jpeg
   # An image asset can refer to one or more resolution-specific "variants", see
   # https://flutter.dev/assets-and-images/#resolution-aware
