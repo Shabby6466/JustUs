@@ -23,11 +23,12 @@ class _SwipeNavigationState extends State<SwipeNavigation> {
   final PageController _pageController = PageController(initialPage: 0);
 
   void _onTabTapped(int index) {
-    setState(() {
-      currentIndex = index; // Update currentIndex with the selected index
-    });
-    _pageController.animateToPage(index,
-        duration: Duration(milliseconds: 500), curve: Curves.ease);
+    if (currentIndex != index) {
+      _pageController.jumpToPage(index); // Jump to the selected page
+      setState(() {
+        currentIndex = index; // Update currentIndex with the selected index
+      });
+    }
   }
 
   @override

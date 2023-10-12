@@ -1,5 +1,5 @@
 import 'package:flutter/material.dart';
-import 'package:flutter_svg/flutter_svg.dart';
+import 'package:justus/reusables/buttons.dart';
 
 class UserProfile extends StatelessWidget {
   const UserProfile({Key? key}) : super(key: key);
@@ -19,25 +19,7 @@ class UserProfile extends StatelessWidget {
                 onTap: () {
                   Navigator.pop(context);
                 },
-                child: Container(
-                    padding: const EdgeInsets.all(15.0),
-                    height: 50,
-                    width: 50,
-                    decoration: BoxDecoration(
-                      boxShadow: const [
-                        BoxShadow(
-                          color: Colors.black12,
-                          blurRadius: 10,
-                          offset: Offset(0, 5),
-                        ),
-                      ],
-                      borderRadius: BorderRadius.circular(15),
-                      color: Colors.white,
-                    ),
-                    child: SvgPicture.asset(
-                      'assets/buttons_svg/back.svg',
-                      alignment: Alignment.center,
-                    )),
+                child: backbutton,
               ),
             ),
             Container(
@@ -110,8 +92,8 @@ class UserProfile extends StatelessWidget {
               ],
             ),
             Container(
-              padding:
-                  EdgeInsets.only(top: 50, left: 60, right: 60, bottom: 20),
+              padding: const EdgeInsets.only(
+                  top: 50, left: 60, right: 60, bottom: 20),
               child: Container(
                 height: 70,
                 width: 261,
@@ -121,7 +103,7 @@ class UserProfile extends StatelessWidget {
               ),
             ),
             Container(
-              padding: EdgeInsets.only(left: 60, right: 60, bottom: 20),
+              padding: const EdgeInsets.only(left: 60, right: 60, bottom: 20),
               child: Container(
                 height: 70,
                 width: 261,
@@ -131,7 +113,7 @@ class UserProfile extends StatelessWidget {
               ),
             ),
             Container(
-              padding: EdgeInsets.only(left: 60, right: 60, bottom: 20),
+              padding: const EdgeInsets.only(left: 60, right: 60, bottom: 20),
               child: Container(
                 height: 70,
                 width: 261,
