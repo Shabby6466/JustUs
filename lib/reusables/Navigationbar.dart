@@ -1,11 +1,12 @@
 import 'package:flutter/material.dart';
+import 'package:justus/music.dart';
 import 'package:justus/screens/homepages/justUsPage/JustusPage.dart';
 import 'package:justus/screens/homepages/profile/profilepage.dart';
 import 'package:justus/screens/notes/notes.dart';
 
 final pages = [
-  const Center(child: Text("home")),
-  NotesPage(),
+  const Music(),
+  const NotesPage(),
   JustUs(),
   const Center(child: Text("play")),
   const Profilepage()

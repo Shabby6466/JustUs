@@ -166,5 +166,7 @@ var notebooknote = Padding(
         color: Colors.green[100],
         borderRadius: BorderRadius.circular(16),
       ),
-      child: Text("SHOAIB IS DA BEST OFC,", style: TextStyle(fontSize: 15, fontFamily: 'Poppins'))),
+      child: Text("SHOAIB IS DA BEST OFC,",
+          style: TextStyle(
+              fontSize: 15, fontFamily: 'Poppins', color: Colors.black))),
 );

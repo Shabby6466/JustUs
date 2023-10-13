@@ -4,7 +4,7 @@
 import 'package:flutter/material.dart';
 
 class MyColors {
-  static final Color lightBackgroundColor = Color.fromRGBO(253, 239, 231,1.0);
+  static final Color lightBackgroundColor = Color(0xFDF7F4FE);
   static const Color lightFontColor = Colors.black;
   static final Color lightSecondaryColor = Color.fromRGBO(69, 88, 120, 1.0);
   static final Color lightPrimaryColor = Color(0xFFF77D8E);

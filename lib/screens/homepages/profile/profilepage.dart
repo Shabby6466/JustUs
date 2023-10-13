@@ -3,7 +3,7 @@
 import 'package:flutter/material.dart';
 import 'package:justus/reusables/MyColors.dart';
 import 'package:justus/reusables/profile_buttons.dart';
-import 'package:justus/screens/about_dev.dart';
+import 'package:justus/screens/homepages/about_dev.dart';
 import 'package:justus/screens/homepages/profile/partners_profile.dart';
 import 'package:justus/screens/homepages/profile/user_profile.dart';
 
